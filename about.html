@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About &amp; Process | JayAds — In-House Cinematic Agency</title>
+  <meta name="description" content="Discover the story behind JayAds. Headed by Jayanth S., we combine high-end cinema tools with digital growth architecture in Chennai." />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="about-page">
+
+  <!-- Noise Overlay & Preloader -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo"><span class="logo-accent">Jay</span>Ads</div>
+      <div class="preloader-bar"><div class="preloader-fill"></div></div>
+      <p class="preloader-text">Loading Story…</p>
+    </div>
+  </div>
+
+
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="JayAds Home">
+        <span class="logo-accent">Jay</span>Ads
+      </a>
+
+      <nav class="nav-links" id="nav-links" role="navigation">
+        <div class="nav-item-dropdown">
+          <a href="services.html" class="dropdown-trigger" data-section="services">Services <span class="chevron">▼</span></a>
+          <div class="mega-dropdown">
+            <div class="mega-dropdown-inner">
+              <div class="mega-col-links">
+                <a href="services.html#ad-films" class="mega-link-item">
+                  <span class="mega-link-icon">🎬</span>
+                  <div>
+                    <span class="mega-link-title">Ad Films &amp; Video Production</span>
+                    <span class="mega-link-desc">Cinematic ad films, motion graphics, color grading.</span>
+                  </div>
+                </a>
+                <a href="services.html#social" class="mega-link-item">
+                  <span class="mega-link-icon">⚡</span>
+                  <div>
+                    <span class="mega-link-title">Social Commerce &amp; Ads</span>
+                    <span class="mega-link-desc">Rapid-fire performance creative for social platforms.</span>
+                  </div>
+                </a>
+                <a href="services.html#brand" class="mega-link-item">
+                  <span class="mega-link-icon">🏆</span>
+                  <div>
+                    <span class="mega-link-title">Brand Strategy &amp; Identity</span>
+                    <span class="mega-link-desc">Complete visual identities &amp; communication plans.</span>
+                  </div>
+                </a>
+                <a href="services.html#web" class="mega-link-item">
+                  <span class="mega-link-icon">✦</span>
+                  <div>
+                    <span class="mega-link-title">Web &amp; Organic Growth</span>
+                    <span class="mega-link-desc">Premium SEO architecture &amp; high-converting web builds.</span>
+                  </div>
+                </a>
+              </div>
+              <div class="mega-col-featured">
+                <div class="mega-featured-card">
+                  <span class="featured-tag">Free Strategy</span>
+                  <h4>Ready to scale?</h4>
+                  <p>Book a direct session with our team to map your brand's growth blueprint.</p>
+                  <button class="btn-primary mini-book-btn">Book a Session</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="work.html" data-section="portfolio">Our Work</a>
+        <a href="about.html" class="active" data-section="process">About &amp; Process</a>
+        <a href="index.html#testimonials" data-section="testimonials">Testimonials</a>
+        <a href="contact.html" data-section="contact">Contact</a>
+      </nav>
+
+      <button class="nav-cta desktop-only" id="nav-book-btn">Book a Call</button>
+      <button class="hamburger" id="hamburger" aria-label="Open Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="services.html">Services</a>
+      <a href="work.html">Our Work</a>
+      <a href="about.html" class="active">About &amp; Process</a>
+      <a href="index.html#testimonials">Testimonials</a>
+      <a href="contact.html">Contact</a>
+      <button class="nav-cta mobile-book-btn">Book a Call</button>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="about-hero">
+    <div class="hero-bg-mesh"></div>
+    <div class="container hero-content animate-on-scroll">
+      <span class="section-label">THE STORY OF JAYADS</span>
+      <h1 class="hero-headline">
+        Cinematic Vision.<br />
+        Performance-Driven <em>Results</em>.
+      </h1>
+      <p class="hero-sub">
+        Operating out of Anna Nagar, Chennai, JayAds was founded by Jayanth S. to shatter the slow-paced agency models and deliver world-class creative assets with rapid speed.
+      </p>
+    </div>
+  </section>
+
+  <!-- VALUES SECTION -->
+  <section class="values-section">
+    <div class="container">
+      <div class="values-grid">
+        <div class="value-card animate-on-scroll">
+          <div class="value-icon">⚡</div>
+          <h3>Unmatched Velocity</h3>
+          <p>
+            Traditional agencies take weeks to approve scripts and schedule shoots. We script, cast, shoot, and color-grade same-day.
+          </p>
+        </div>
+        <div class="value-card animate-on-scroll">
+          <div class="value-icon">🎬</div>
+          <h3>Cinema Quality</h3>
+          <p>
+            We don't use simple mobile phones for your primary commercials. We utilize full digital cinema cameras and professional lighting for a premium feel.
+          </p>
+        </div>
+        <div class="value-card animate-on-scroll">
+          <div class="value-icon">📈</div>
+          <h3>ROI Obsessed</h3>
+          <p>
+            We are filmmakers who understand spreadsheets. Every ad frame, visual tag, and script hook is constructed to improve conversion rates and ROAS.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS TIMELINE SECTION -->
+  <section class="process-section" id="process" style="background: var(--bg-surface);">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-label">HOW WE WORK</span>
+        <h2 class="section-title">The Accelerated <em>Workflow</em></h2>
+        <p class="section-desc">Our blueprint for turning campaign concepts into ready-to-test assets in 24 hours.</p>
+      </div>
+
+      <div class="process-timeline">
+        <div class="process-step animate-on-scroll">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h3>Discovery &amp; Strategy Hook</h3>
+            <p>We analyze your target market, competitor bottlenecks, and draft high-converting scripts based on psychological hooks.</p>
+          </div>
+        </div>
+        <div class="process-step animate-on-scroll">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h3>Morning Production Shoot</h3>
+            <p>Our in-house crew shoots using our premium cinema gear. No third-party freelancers. Total creative command.</p>
+          </div>
+        </div>
+        <div class="process-step animate-on-scroll">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h3>Afternoon Edit &amp; Delivery</h3>
+            <p>Our edit suite handles color-grading, custom sound-design overlays, caption generation, and delivers final social variants by 4:00 PM.</p>
+          </div>
+        </div>
+        <div class="process-step animate-on-scroll">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h3>Media Testing &amp; Scaling</h3>
+            <p>We deploy, test ad variants, monitor metrics, and rapidly iterate on hook styles to scale winning ads.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA CONVERSION SECTION -->
+  <section class="final-cta">
+    <div class="cta-bg-orb"></div>
+    <div class="container final-cta-content animate-on-scroll">
+      <p class="section-label">Ready to Align?</p>
+      <h2 class="cta-headline">Let's Team Up and Win.</h2>
+      <p class="cta-description">
+        Schedule your free brand consultation call. No commitment required.
+      </p>
+      <button class="btn-cta-large" id="cta-book-btn">Schedule Strategy Session</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-column footer-brand">
+            <a href="index.html" class="logo"><span class="logo-accent">Jay</span>Ads</a>
+            <p class="footer-about">Chennai's premium in-house production and digital growth team.</p>
+          </div>
+          <div class="footer-column">
+            <h4 class="footer-heading">Explore</h4>
+            <div class="footer-links">
+              <a href="index.html">Home</a>
+              <a href="services.html">Services</a>
+              <a href="work.html">Our Work</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h4 class="footer-heading">Headquarters</h4>
+            <address style="font-style:normal; font-size:0.875rem; color:var(--text-secondary); line-height:1.7;">
+              Door No. 7, 40/1, 6th St, Kumaran Nagar, Anna Nagar East, Chennai – 600102.
+            </address>
+          </div>
+          <div class="footer-column">
+            <h4 class="footer-heading">Operational Hours</h4>
+            <div class="footer-hours">
+              <div class="hours-row"><span class="day">Mon — Fri</span><span class="time">9:30 AM – 6:00 PM</span></div>
+              <div class="hours-row"><span class="day">Sat</span><span class="time">10:00 AM – 6:00 PM</span></div>
+            </div>
+            <button class="footer-cta-btn" id="footer-cta-btn">Book a Free Call →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <p class="footer-copyright">&copy; 2026 JayAds. All rights reserved. Built by Jayanth S.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOOK A CALL MODAL -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close" aria-label="Close modal">×</button>
+      <div class="modal-header">
+        <div class="modal-logo"><span class="logo-accent">Jay</span>Ads</div>
+        <h2 class="modal-title" id="modal-title">Book Your Free Strategy Call</h2>
+        <p class="modal-subtitle">We'll respond within 2 hours.</p>
+      </div>
+      <div class="modal-success" id="modal-success" style="display:none;">
+        <div class="success-icon">✓</div>
+        <h3>You're Booked In!</h3>
+        <button class="btn-primary" onclick="closeModal();">Close</button>
+      </div>
+      <form class="modal-form" id="booking-form">
+        <div class="form-group"><input type="text" id="booking-name" class="form-input" placeholder="Name" required /></div>
+        <div class="form-group"><input type="email" id="booking-email" class="form-input" placeholder="Work Email" required /></div>
+        <div class="form-group">
+          <select id="booking-service" class="form-select" required>
+            <option value="" disabled selected>Select Goal</option>
+            <option value="ad-films">🎬 Ad Films &amp; Video Production</option>
+            <option value="social-commerce">⚡ Social Commerce Ads</option>
+            <option value="branding">🏆 Brand Strategy</option>
+            <option value="organic-growth">✦ Web Design &amp; SEO</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-primary form-submit-btn">Confirm Strategy Session →</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Preloader fade-out
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('preloader');
+      setTimeout(() => {
+        preloader.classList.add('fade-out');
+        setTimeout(() => preloader.style.display = 'none', 600);
+      }, 600);
+    });
+
+
+    window.addEventListener('scroll', () => {
+      const scrollProgress = document.getElementById('scroll-progress');
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (scrollProgress && docHeight > 0) {
+        scrollProgress.style.width = (scrollTop / docHeight) * 100 + '%';
+      }
+    });
+
+    // Modal
+    const modalOverlay = document.getElementById('modal-overlay');
+    const bookingForm = document.getElementById('booking-form');
+    const modalSuccess = document.getElementById('modal-success');
+    
+    function openModal() {
+      modalOverlay.classList.add('active');
+      bookingForm.style.display = 'flex';
+      modalSuccess.style.display = 'none';
+    }
+    function closeModal() { modalOverlay.classList.remove('active'); }
+
+    document.querySelectorAll('.mini-book-btn, #nav-book-btn, #cta-book-btn, #footer-cta-btn').forEach(btn => {
+      btn.addEventListener('click', openModal);
+    });
+    document.getElementById('modal-close').addEventListener('click', closeModal);
+
+    bookingForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      bookingForm.style.display = 'none';
+      modalSuccess.style.display = 'flex';
+    });
+
+    // Mobile Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileNav.classList.toggle('active');
+    });
+
+    // Draw timeline process animation
+    const processTimeline = document.querySelector('.process-timeline');
+    if (processTimeline) {
+      window.addEventListener('scroll', () => {
+        const timelineRect = processTimeline.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        let percent = 0;
+        if (timelineRect.top < windowHeight) {
+          const distanceScrolled = windowHeight - timelineRect.top;
+          percent = Math.min(100, Math.max(0, (distanceScrolled / (timelineRect.height + windowHeight * 0.2)) * 100));
+        }
+        processTimeline.style.setProperty('--timeline-progress', `${percent}%`);
+      });
+    }
+
+    // Animate on scroll observer
+    const scrollObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.animate-on-scroll').forEach(el => scrollObserver.observe(el));
+  </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | JayAds</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="section-pearl">
+  
+  <header class="site-header" id="site-header" style="background: rgba(235, 221, 197, 0.9);">
+    <div class="header-inner">
+      <a href="index.html" class="logo" style="color: var(--bg-primary);">Jay<span class="logo-accent">Ads</span></a>
+      <nav class="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="index.html" style="color: var(--bg-primary);">Home</a></li>
+          <li><a href="services.html" style="color: var(--bg-primary);">Services</a></li>
+          <li><a href="work.html" style="color: var(--bg-primary);">Work</a></li>
+          <li><a href="about.html" style="color: var(--bg-primary);">About</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="btn-pill btn-pill-primary hero-book-btn">Book Call</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="section-pearl" style="padding-top: 180px; padding-bottom: 80px;">
+    <div class="container" style="display:flex; gap: 80px; align-items: flex-start;">
+      
+      <div style="flex: 1;">
+        <h1 class="superside-hero-heading" style="font-size: clamp(3rem, 6vw, 5rem); margin-bottom: 24px;">Let's Talk<br>Growth.</h1>
+        <p style="font-size: 1.25rem; color: var(--bg-primary); opacity: 0.8; margin-bottom: 40px; max-width: 500px;">
+          Whether you need a massive cinematic ad campaign or a complete digital overhaul, our team in Chennai is ready to deploy.
+        </p>
+        
+        <div class="bento-item" style="background: var(--bg-primary); color: var(--text-primary); padding: 32px;">
+          <h3 style="font-size: 1.5rem; margin-bottom: 16px;">Headquarters</h3>
+          <p style="font-size: 1.1rem; opacity: 0.8; margin-bottom: 8px;">Anna Nagar, Chennai</p>
+          <p style="font-size: 1.1rem; opacity: 0.8; margin-bottom: 24px;">Tamil Nadu, India</p>
+          
+          <h3 style="font-size: 1.5rem; margin-bottom: 16px;">Direct Lines</h3>
+          <p style="font-size: 1.1rem; margin-bottom: 8px;">📞 +91 98765 43210</p>
+          <p style="font-size: 1.1rem;">✉️ jayanth@jayads.com</p>
+        </div>
+      </div>
+      
+      <div style="flex: 1; background: var(--bg-surface); padding: 56px; border-radius: 32px; border: 2px solid var(--border-light); color: var(--text-primary);">
+        <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 32px;">Send an Inquiry</h2>
+        <form id="contact-form" style="display:flex; flex-direction:column; gap: 24px;">
+          <div>
+            <label style="font-size: 0.9rem; font-weight:600; margin-bottom:8px; display:block;">Full Name</label>
+            <input type="text" placeholder="Jayanth S." style="width:100%; padding: 16px; border-radius: 12px; border: 1px solid var(--border-subtle); background: var(--bg-primary); color: var(--text-primary);" required>
+          </div>
+          <div>
+            <label style="font-size: 0.9rem; font-weight:600; margin-bottom:8px; display:block;">Company Email</label>
+            <input type="email" placeholder="name@brand.com" style="width:100%; padding: 16px; border-radius: 12px; border: 1px solid var(--border-subtle); background: var(--bg-primary); color: var(--text-primary);" required>
+          </div>
+          <div>
+            <label style="font-size: 0.9rem; font-weight:600; margin-bottom:8px; display:block;">Message</label>
+            <textarea rows="4" placeholder="Tell us about your campaign goals..." style="width:100%; padding: 16px; border-radius: 12px; border: 1px solid var(--border-subtle); background: var(--bg-primary); color: var(--text-primary);" required></textarea>
+          </div>
+          <button type="submit" class="btn-pill btn-pill-primary" style="width:100%; justify-content:center;">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+  
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <h3 style="font-size: 2.5rem; font-weight:800; color:var(--text-primary);">Book Your Growth Session</h3>
+      </div>
+      <form class="modal-form" id="booking-form">
+        <button type="submit" class="btn-pill btn-pill-primary">Confirm Strategy Session →</button>
+      </form>
+    </div>
+  </div>
+  
+  <script>
+    const bookButtons = document.querySelectorAll('.hero-book-btn');
+    const modalOverlay = document.getElementById('modal-overlay');
+    const modalClose = document.getElementById('modal-close');
+    bookButtons.forEach(btn => btn.addEventListener('click', () => modalOverlay.classList.add('active')));
+    modalClose.addEventListener('click', () => modalOverlay.classList.remove('active'));
+  </script>
+</body>
+</html>
