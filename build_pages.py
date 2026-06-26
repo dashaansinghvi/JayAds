@@ -1,610 +1,709 @@
 import os
 
 def build_head(title):
-    return f'''<!DOCTYPE html>
+    return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
-  <meta name="description" content="JayAds provides cinematic ad films, performance-grade social commerce campaigns, and high-performance web experiences." />
+  <meta name="description" content="JayAds is Chennai's premium digital marketing agency. Performance ads, social commerce, brand strategy &amp; web growth." />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    :root {{
-      --clr-pearl: #EBDDC5;
-      --clr-police-blue: #2E4365;
-      --clr-marigold: #E59D2C;
-      --clr-buff: #F3D58D;
-      --clr-citrine: #8A3B08;
-    }}
-    .bg-pearl {{ background-color: var(--clr-pearl); color: var(--clr-police-blue); }}
-    .bg-police-blue {{ background-color: var(--clr-police-blue); color: var(--clr-pearl); }}
-    .bg-marigold {{ background-color: var(--clr-marigold); color: var(--clr-police-blue); }}
-    .bg-buff {{ background-color: var(--clr-buff); color: var(--clr-citrine); }}
-    .bg-citrine {{ background-color: var(--clr-citrine); color: var(--clr-pearl); }}
-    
-    .massive-section {{
-      padding: 140px 5%;
-      position: relative;
-      overflow: hidden;
-    }}
-    
-    .section-title-mega {{
-      font-size: clamp(3rem, 5vw, 6rem);
-      font-weight: 900;
-      line-height: 1.05;
-      margin-bottom: 40px;
-      letter-spacing: -0.03em;
-    }}
-    .section-desc-mega {{
-      font-size: clamp(1.2rem, 2vw, 1.8rem);
-      line-height: 1.6;
-      max-width: 900px;
-      margin-bottom: 80px;
-      opacity: 0.9;
-      font-weight: 400;
-    }}
-    
-    /* Bento Grid System */
-    .bento-grid {{
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 30px;
-      max-width: 1400px;
-      margin: 0 auto;
-    }}
-    .bento-item {{
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 32px;
-      padding: 50px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
-      backdrop-filter: blur(12px);
-    }}
-    .bento-item:hover {{
-      transform: translateY(-8px);
-      box-shadow: 0 30px 60px rgba(0,0,0,0.15);
-    }}
-    .bg-pearl .bento-item, .bg-buff .bento-item, .bg-marigold .bento-item {{
-      background: rgba(0,0,0,0.04);
-      border-color: rgba(0,0,0,0.08);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-    }}
-    .bg-pearl .bento-item:hover, .bg-buff .bento-item:hover, .bg-marigold .bento-item:hover {{
-      box-shadow: 0 30px 60px rgba(0,0,0,0.08);
-    }}
-    
-    .bento-col-12 {{ grid-column: span 12; }}
-    .bento-col-8 {{ grid-column: span 8; }}
-    .bento-col-4 {{ grid-column: span 4; }}
-    .bento-col-6 {{ grid-column: span 6; }}
-    .bento-col-3 {{ grid-column: span 3; }}
-    .bento-col-9 {{ grid-column: span 9; }}
-    .bento-col-7 {{ grid-column: span 7; }}
-    .bento-col-5 {{ grid-column: span 5; }}
-    
-    @media (max-width: 1024px) {{
-      .bento-col-8, .bento-col-4, .bento-col-6, .bento-col-3, .bento-col-9, .bento-col-7, .bento-col-5 {{ grid-column: span 12; }}
-    }}
-    
-    .bento-tag {{
-      display: inline-block;
-      padding: 8px 16px;
-      border-radius: 50px;
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 30px;
-      align-self: flex-start;
-      background: rgba(255,255,255,0.15);
-    }}
-    .bg-pearl .bento-tag, .bg-buff .bento-tag, .bg-marigold .bento-tag {{
-      background: rgba(0,0,0,0.1);
-    }}
-    
-    .bento-item h3 {{
-      font-size: clamp(2rem, 3vw, 3rem);
-      font-weight: 800;
-      margin-bottom: 24px;
-      line-height: 1.1;
-      letter-spacing: -0.02em;
-    }}
-    .bento-item p {{
-      font-size: 1.25rem;
-      line-height: 1.7;
-      opacity: 0.85;
-      margin-bottom: 30px;
-    }}
-    .bento-stat {{
-      font-size: clamp(3rem, 5vw, 6rem);
-      font-weight: 900;
-      line-height: 1;
-      margin-bottom: 10px;
-      letter-spacing: -0.05em;
-    }}
-    .bento-stat-desc {{
-      font-size: 1.2rem;
-      font-weight: 600;
-      opacity: 0.8;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }}
-    .bento-list {{
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }}
-    .bento-list li {{
-      position: relative;
-      padding-left: 36px;
-      font-size: 1.2rem;
-      font-weight: 600;
-      line-height: 1.4;
-    }}
-    .bento-list li::before {{
-      content: '→';
-      position: absolute;
-      left: 0;
-      top: 0;
-      font-weight: 900;
-      color: inherit;
-      opacity: 0.5;
-    }}
-    .bento-img {{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 16px;
-      margin-top: 30px;
-    }}
-    .bento-img-full {{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 16px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      opacity: 0.6;
-    }}
-    .has-bg-img {{
-      position: relative;
-      overflow: hidden;
-    }}
-  </style>
 </head>
-<body class="jayads-body">
-  <header class="site-header" id="site-header" style="position: sticky; top: 0; z-index: 1000; background: rgba(46, 67, 101, 0.95); backdrop-filter: blur(10px); padding: 20px 5%; border-bottom: 1px solid rgba(255,255,255,0.1);">
-    <div class="header-inner" style="display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto;">
-      <a href="index.html" class="logo" aria-label="JayAds Home" style="font-size: 1.8rem; font-weight: 900; color: var(--clr-pearl); text-decoration: none; letter-spacing: -1px;">
-        <span class="logo-accent" style="color: var(--clr-marigold);">Jay</span>Ads
-      </a>
-      <nav class="nav-links" id="nav-links" role="navigation" style="display: flex; gap: 40px; align-items: center;">
-        <a href="services.html" style="color: var(--clr-pearl); text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: color 0.3s;">Services</a>
-        <a href="work.html" style="color: var(--clr-pearl); text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: color 0.3s;">Our Work</a>
-        <a href="about.html" style="color: var(--clr-pearl); text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: color 0.3s;">About &amp; Process</a>
-        <a href="contact.html" style="color: var(--clr-pearl); text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: color 0.3s;">Contact</a>
-      </nav>
-      <a href="contact.html" class="nav-cta desktop-only" style="background: var(--clr-marigold); color: var(--clr-police-blue); padding: 12px 24px; border-radius: 50px; font-weight: 800; text-decoration: none; transition: transform 0.3s;">Book a Call</a>
+<body class="services-page">
+  <!-- Noise Overlay & Preloader -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo"><span class="logo-accent">Jay</span>Ads</div>
+      <div class="preloader-bar"><div class="preloader-fill"></div></div>
+      <p class="preloader-text">Loading Capabilities…</p>
     </div>
-  </header>
-'''
+  </div>
+  <div class="scroll-progress" id="scroll-progress"></div>"""
 
-def build_footer():
-    return '''
-  <footer class="site-footer" style="background-color: var(--clr-police-blue); color: var(--clr-pearl); padding: 120px 5% 60px; text-align: center; border-top: 1px solid rgba(235, 221, 197, 0.1);">
-    <h2 style="font-size: clamp(2.5rem, 4vw, 4.5rem); margin-bottom: 24px; font-weight: 900; letter-spacing: -0.03em;">Ready to dominate your market?</h2>
-    <p style="font-size: clamp(1.2rem, 2vw, 1.5rem); margin-bottom: 50px; opacity: 0.8; max-width: 600px; margin-left: auto; margin-right: auto;">Join the elite brands partnering with JayAds for unfair creative advantages.</p>
-    <a href="contact.html" style="display: inline-block; padding: 24px 50px; background-color: var(--clr-marigold); color: var(--clr-police-blue); text-decoration: none; font-weight: 900; border-radius: 50px; font-size: 1.3rem; transition: transform 0.3s; box-shadow: 0 10px 30px rgba(229, 157, 44, 0.3);">Start Your Project Now</a>
+def build_header(active_page):
+    home_active = 'class="active nav-home-link"' if active_page == 'home' else 'class="nav-home-link"'
+    services_active = 'class="dropdown-trigger active"' if active_page == 'services' else 'class="dropdown-trigger"'
+    work_active = 'class="active"' if active_page == 'work' else ''
+    about_active = 'class="active"' if active_page == 'about' else ''
     
-    <div style="margin-top: 100px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin-left: auto; margin-right: auto; flex-wrap: wrap; gap: 20px;">
-      <div style="font-weight: 800; font-size: 1.5rem; letter-spacing: -1px;">
-        <span style="color: var(--clr-marigold);">Jay</span>Ads
+    return f"""  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="JayAds Home">
+        <span class="logo-accent">Jay</span>Ads
+      </a>
+
+      <nav class="nav-links" id="nav-links" role="navigation" aria-label="Main Navigation">
+        <a href="index.html" {home_active} data-section="home">Home</a>
+        <div class="nav-item-dropdown">
+          <a href="services.html" {services_active} data-section="services">Services <svg class="chevron-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px; vertical-align:middle; margin-bottom:3px; opacity:0.8;"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+          <div class="mega-dropdown">
+            <div class="mega-dropdown-inner">
+              <div class="mega-col-links">
+                <span class="mega-title">Growth & Marketing</span>
+                <a href="services.html#digital-marketing" class="mega-link-item">
+                  <div class="mega-link-icon" style="width:24px;height:24px;display:flex;align-items:center;justify-content:center;color:var(--accent-gold);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                  </div>
+                  <div>
+                    <span class="mega-link-title">Digital Marketing Strategy</span>
+                    <span class="mega-link-desc">Data-driven growth plans</span>
+                  </div>
+                </a>
+                <a href="services.html#seo" class="mega-link-item">
+                  <div class="mega-link-icon" style="width:24px;height:24px;display:flex;align-items:center;justify-content:center;color:var(--accent-gold);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  </div>
+                  <div>
+                    <span class="mega-link-title">Organic Growth (SEO)</span>
+                    <span class="mega-link-desc">Long-term search visibility</span>
+                  </div>
+                </a>
+                <a href="services.html#paid-ads" class="mega-link-item">
+                  <div class="mega-link-icon" style="width:24px;height:24px;display:flex;align-items:center;justify-content:center;color:var(--accent-gold);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  </div>
+                  <div>
+                    <span class="mega-link-title">Paid Advertising</span>
+                    <span class="mega-link-desc">Google Ads &amp; Meta Campaigns</span>
+                  </div>
+                </a>
+              </div>
+              <div class="mega-col-links">
+                <span class="mega-title">Design & Consulting</span>
+                <a href="services.html#web-design" class="mega-link-item">
+                  <div class="mega-link-icon" style="width:24px;height:24px;display:flex;align-items:center;justify-content:center;color:var(--accent-gold);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                  </div>
+                  <div>
+                    <span class="mega-link-title">Website Design</span>
+                    <span class="mega-link-desc">High-converting online presence</span>
+                  </div>
+                </a>
+                <a href="services.html#branding" class="mega-link-item">
+                  <div class="mega-link-icon" style="width:24px;height:24px;display:flex;align-items:center;justify-content:center;color:var(--accent-gold);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  </div>
+                  <div>
+                    <span class="mega-link-title">Brand Identity</span>
+                    <span class="mega-link-desc">Positioning and visual assets</span>
+                  </div>
+                </a>
+                <a href="services.html#consulting" class="mega-link-item">
+                  <div class="mega-link-icon" style="width:24px;height:24px;display:flex;align-items:center;justify-content:center;color:var(--accent-gold);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  </div>
+                  <div>
+                    <span class="mega-link-title">Marketing Consulting</span>
+                    <span class="mega-link-desc">Expert strategy and advisory</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="work.html" {work_active} data-section="portfolio">Work</a>
+        <a href="about.html" {about_active} data-section="process">About</a>
+      </nav>
+
+      <button class="nav-cta desktop-only" id="nav-book-btn" aria-label="Book a Call">Book a Call</button>
+
+      <button class="hamburger" id="hamburger" aria-label="Open Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="index.html" {"class='active'" if active_page == 'home' else ""}>Home</a>
+      <a href="services.html" {"class='active'" if active_page == 'services' else ""}>Services</a>
+      <a href="work.html" {"class='active'" if active_page == 'work' else ""}>Work</a>
+      <a href="about.html" {"class='active'" if active_page == 'about' else ""}>About</a>
+      <button class="nav-cta mobile-book-btn" id="mobile-book-btn">Book a Call</button>
+    </div>
+  </header>"""
+
+def build_footer_block():
+    return """  <!-- CTA CONVERSION SECTION -->
+  <section class="final-cta">
+    <div class="cta-bg-orb"></div>
+    <div class="container final-cta-content animate-on-scroll">
+      <p class="section-label">Want Similar Results?</p>
+      <h2 class="cta-headline">Let's Design Your Breakthrough.</h2>
+      <p class="cta-description">
+        Schedule a consultation with our campaign builders to construct a custom marketing timeline.
+      </p>
+      <button class="btn-cta-large" id="cta-book-btn">Book Your Strategy Call</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-column footer-brand">
+            <a href="index.html" class="logo"><span class="logo-accent">Jay</span>Ads</a>
+            <p class="footer-about">Chennai's premium in-house marketing and digital growth team.</p>
+          </div>
+          <div class="footer-column">
+            <h4 class="footer-heading">Explore</h4>
+            <div class="footer-links">
+              <a href="index.html">Home</a>
+              <a href="services.html">Services</a>
+              <a href="about.html">About</a>
+              <a href="work.html">Work</a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h4 class="footer-heading">Headquarters</h4>
+            <address style="font-style:normal; font-size:0.875rem; color:var(--text-secondary); line-height:1.7;">
+              Door No. 7, 40/1, 6th St, Kumaran Nagar, Anna Nagar East, Chennai – 600102.
+            </address>
+          </div>
+          <div class="footer-column">
+            <h4 class="footer-heading">Operational Hours</h4>
+            <div class="footer-hours">
+              <div class="hours-row"><span class="day">Mon — Fri</span><span class="time">9:30 AM – 6:00 PM</span></div>
+              <div class="hours-row"><span class="day">Sat</span><span class="time">10:00 AM – 6:00 PM</span></div>
+            </div>
+            <button class="footer-cta-btn" id="footer-cta-btn">Book a Free Call →</button>
+          </div>
+        </div>
       </div>
-      <div style="opacity: 0.6; font-size: 1rem; font-weight: 500;">
-        &copy; 2026 JayAds. All rights reserved. Shot in the morning. Delivered by 4 PM.
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <p class="footer-copyright">&copy; 2026 JayAds. All rights reserved. Built by Jayanth S.</p>
       </div>
     </div>
   </footer>
+
+  <!-- BOOK A CALL MODAL -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close" aria-label="Close modal">×</button>
+      <div class="modal-header">
+        <div class="modal-logo"><span class="logo-accent">Jay</span>Ads</div>
+        <h2 class="modal-title" id="modal-title">Book Your Free Strategy Call</h2>
+        <p class="modal-subtitle">We'll respond within 2 hours.</p>
+      </div>
+      <div class="modal-success" id="modal-success" style="display:none;">
+        <div class="success-icon"></div>
+        <h3>You're Booked In!</h3>
+        <button class="btn-primary" onclick="closeModal();">Close</button>
+      </div>
+      <form class="modal-form" id="booking-form">
+        <div class="form-group"><input type="text" id="booking-name" class="form-input" placeholder="Name" required /></div>
+        <div class="form-group"><input type="email" id="booking-email" class="form-input" placeholder="Work Email" required /></div>
+        <div class="form-group">
+          <select id="booking-service" class="form-select" required>
+            <option value="" disabled selected>Select Goal</option>
+            <option value="paid-ads"> Paid Ads &amp; Performance Marketing</option>
+            <option value="social-commerce"> Social Commerce Ads</option>
+            <option value="branding"> Brand Strategy</option>
+            <option value="organic-growth">✦ Web Design &amp; SEO</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-primary form-submit-btn">Confirm Strategy Session →</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Preloader fade-out
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('preloader');
+      setTimeout(() => {
+        document.body.classList.add('loaded');
+        preloader.classList.add('fade-out');
+        setTimeout(() => preloader.style.display = 'none', 600);
+      }, 600);
+    });
+
+    window.addEventListener('scroll', () => {
+      const scrollProgress = document.getElementById('scroll-progress');
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (scrollProgress && docHeight > 0) {
+        scrollProgress.style.width = (scrollTop / docHeight) * 100 + '%';
+      }
+    });
+
+    // Modal
+    const modalOverlay = document.getElementById('modal-overlay');
+    const bookingForm = document.getElementById('booking-form');
+    const modalSuccess = document.getElementById('modal-success');
+    
+    function openModal() {
+      modalOverlay.classList.add('active');
+      bookingForm.style.display = 'flex';
+      modalSuccess.style.display = 'none';
+    }
+    function closeModal() { modalOverlay.classList.remove('active'); }
+
+    document.querySelectorAll('.mini-book-btn, #nav-book-btn, #cta-book-btn, #footer-cta-btn, .hero-book-btn').forEach(btn => {
+      btn.addEventListener('click', openModal);
+    });
+    document.getElementById('modal-close').addEventListener('click', closeModal);
+
+    bookingForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      bookingForm.style.display = 'none';
+      modalSuccess.style.display = 'flex';
+    });
+
+    // Mobile Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileNav.classList.toggle('active');
+    });
+
+    // Animate on scroll observer
+    const scrollObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.animate-on-scroll').forEach(el => scrollObserver.observe(el));
+  </script>
 </body>
-</html>
-'''
+</html>"""
 
-# Build Services
-services_html = build_head("Our Services | JayAds") + '''
-  <section class="massive-section bg-police-blue">
-    <div class="bento-grid" style="margin-bottom: 60px;">
-      <div class="bento-item bento-col-12" style="padding: 100px 50px; text-align: center; border: none; background: transparent; box-shadow: none;">
-        <h1 class="section-title-mega" style="font-size: clamp(4rem, 8vw, 8rem); margin-bottom: 30px; text-transform: uppercase;">Creative that<br><span style="color: var(--clr-marigold);">Performs.</span> At Scale.</h1>
-        <p class="section-desc-mega" style="margin: 0 auto; font-size: clamp(1.4rem, 2vw, 2rem);">We are an elite, full-stack creative and growth powerhouse. We don't just make pretty pictures. We engineer scalable revenue engines through cinematic video, rapid-fire social commerce, and high-converting web architecture.</p>
-      </div>
-    </div>
-    
-    <div class="bento-grid">
-      <div class="bento-item bento-col-8 has-bg-img" style="min-height: 400px; background: var(--clr-citrine); color: var(--clr-pearl); border: none;">
-        <span class="bento-tag">The JayAds Advantage</span>
-        <h3 style="font-size: 3.5rem;">Faster than an agency.<br>Better than in-house.</h3>
-        <p style="font-size: 1.5rem; max-width: 600px;">We’ve condensed the traditional 3-week agency bloated timeline into a deadly 48-hour sprint. Top 1% creative talent directly integrated into your slack channel.</p>
-      </div>
-      <div class="bento-item bento-col-4" style="background: var(--clr-marigold); color: var(--clr-police-blue); border: none; justify-content: center; align-items: center; text-align: center;">
-        <div class="bento-stat">12x</div>
-        <div class="bento-stat-desc">Faster Turnaround</div>
-        <div style="margin-top: 30px; width: 100%; height: 2px; background: rgba(0,0,0,0.1);"></div>
-        <div class="bento-stat" style="margin-top: 30px;">40%</div>
-        <div class="bento-stat-desc">Lower Customer Acquisition Cost</div>
-      </div>
+def generate_services():
+    services_body = build_head("Our Services | JayAds") + build_header("services") + """
+  <!-- HERO SECTION -->
+  <section class="services-hero">
+    <div class="hero-bg-mesh"></div>
+    <div class="container hero-content animate-on-scroll">
+      <span class="section-label">OUR CAPABILITIES</span>
+      <h1 class="hero-headline">
+        Full-Stack Marketing<br />
+        &amp; <em>Growth</em> Services.
+      </h1>
+      <p class="hero-sub">
+        No hand-offs. No slow agency bloat. Just elite creative work engineered directly to boost conversion rates and drive revenue.
+      </p>
     </div>
   </section>
 
-  <section class="massive-section bg-pearl" id="ad-films">
-    <h2 class="section-title-mega">Cinematic Ad Films <br>&amp; Video Production</h2>
-    <p class="section-desc-mega">Stop scrolling. Start converting. We bring Hollywood-level production quality to digital performance marketing. TV-ready commercials built for the Instagram generation.</p>
-    
-    <div class="bento-grid">
-      <div class="bento-item bento-col-7">
-        <span class="bento-tag">Deliverables</span>
-        <h3>Full-Scale Production</h3>
-        <p>From script to screen in days, not months. We handle the entire pipeline internally, eliminating agency middlemen and bloat.</p>
-        <ul class="bento-list">
-          <li>Concept Development & Scriptwriting</li>
-          <li>Talent Sourcing & Location Scouting</li>
-          <li>4K/6K Cinematic Principle Photography</li>
-          <li>Advanced Color Grading (DaVinci Resolve)</li>
-          <li>Sound Design & Custom Audio Mixing</li>
-          <li>VFX & Motion Graphics Overlays</li>
-        </ul>
-      </div>
+  <!-- DETAILED SERVICES LISTING -->
+  <section class="services-detail-section">
+    <div class="container">
       
-      <div class="bento-item bento-col-5 bg-police-blue" style="color: var(--clr-pearl);">
-        <span class="bento-tag" style="background: rgba(255,255,255,0.1);">The Stack</span>
-        <h3>We shoot on the best.</h3>
-        <div class="bento-grid" style="grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
-          <div>
-            <div style="font-weight: 900; font-size: 2rem;">ARRI</div>
-            <p style="font-size: 0.9rem; opacity: 0.7;">Alexa Mini LF</p>
-          </div>
-          <div>
-            <div style="font-weight: 900; font-size: 2rem;">RED</div>
-            <p style="font-size: 0.9rem; opacity: 0.7;">V-Raptor 8K</p>
-          </div>
-          <div>
-            <div style="font-weight: 900; font-size: 2rem;">Sony</div>
-            <p style="font-size: 0.9rem; opacity: 0.7;">FX9 & FX6 Series</p>
-          </div>
-          <div>
-            <div style="font-weight: 900; font-size: 2rem;">Aputure</div>
-            <p style="font-size: 0.9rem; opacity: 0.7;">Pro Lighting Grid</p>
+      <!-- Service 1 -->
+      <div class="service-detail-block animate-on-scroll" id="paid-ads">
+        <span id="corporate"></span>
+        <div class="service-detail-info">
+          <span class="service-num">01</span>
+          <h2 class="service-detail-title">Paid Ads &amp; Performance Marketing</h2>
+          <p class="service-detail-desc">
+            We produce highly targeted performance marketing campaigns, optimized Google Ads, and data-driven Meta ads that demand attention. Utilizing deep analytics and continuous A/B testing, we bring scalable growth to your brand.
+          </p>
+          <ul class="service-features-list">
+            <li> Full Campaign Strategy &amp; Setup</li>
+            <li> Audience Targeting &amp; Segmentation</li>
+            <li> Conversion Rate Optimization (CRO)</li>
+            <li> Multi-platform Execution (Meta, Google, LinkedIn)</li>
+          </ul>
+          <button class="btn-primary mini-book-btn">Request a Demo Commercial</button>
+        </div>
+        <div class="service-detail-visual">
+          <div class="visual-card">
+            <span class="badge-tag">PERFORMANCE</span>
+            <h3>"The Camera Never Lies."</h3>
+            <p>We craft short narrative arcs that leave lasting emotional impressions on viewers.</p>
           </div>
         </div>
       </div>
 
-      <div class="bento-item bento-col-12">
-        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 40px;">
-          <div style="flex: 1; min-width: 300px;">
-            <h3>The "Shot by 10 AM, Live by 4 PM" Guarantee</h3>
-            <p>Our proprietary on-set DIT and real-time editing workflows mean we can cut variations of your ad while the cameras are still rolling. Immediate turnaround for rapid A/B testing.</p>
-          </div>
-          <div style="flex: 1; min-width: 300px; display: flex; gap: 20px;">
-             <div style="flex: 1; background: var(--clr-buff); padding: 30px; border-radius: 20px; text-align: center;">
-               <div style="font-size: 3rem; font-weight: 900; color: var(--clr-citrine);">100+</div>
-               <div style="font-weight: 700; color: var(--clr-police-blue);">Ads Shipped</div>
-             </div>
-             <div style="flex: 1; background: var(--clr-marigold); padding: 30px; border-radius: 20px; text-align: center;">
-               <div style="font-size: 3rem; font-weight: 900; color: var(--clr-police-blue);">15M+</div>
-               <div style="font-weight: 700; color: var(--clr-police-blue);">Views Generated</div>
-             </div>
+      <!-- Service 2 -->
+      <div class="service-detail-block alt animate-on-scroll" id="social">
+        <div class="service-detail-info">
+          <span class="service-num">02</span>
+          <h2 class="service-detail-title">Social Commerce &amp; Performance Ads</h2>
+          <p class="service-detail-desc">
+            Social feeds move fast, and static ads get ignored. We produce rapid-response vertical creatives optimized for Meta, TikTok, and YouTube Shorts. Shot, edited, and formatted to hook users in the first 1.5 seconds.
+          </p>
+          <ul class="service-features-list">
+            <li> Shot in the Morning, Delivered by 4 PM (Same-Day turnaround)</li>
+            <li> Dynamic Hook Variation A/B Testing</li>
+            <li> Built-in Conversion Copywriting &amp; Captions</li>
+            <li> Authentic Creator-Style UGC Video Ads</li>
+          </ul>
+          <button class="btn-primary mini-book-btn">Get Performance Creative</button>
+        </div>
+        <div class="service-detail-visual">
+          <div class="visual-card">
+            <span class="badge-tag">SPEED</span>
+            <h3>Fast Creative Wins.</h3>
+            <p>Our rapid campaign workflow ensures your creative assets are testing in real-time, beating fatigue.</p>
           </div>
         </div>
       </div>
+
+      <!-- Service 3 -->
+      <div class="service-detail-block animate-on-scroll" id="brand">
+        <div class="service-detail-info">
+          <span class="service-num">03</span>
+          <h2 class="service-detail-title">Brand Strategy &amp; Identity</h2>
+          <p class="service-detail-desc">
+            Before you shoot a single frame, you need a story. We define who your brand is, what tone it speaks in, and how it presents itself visually across the entire digital ecosystem.
+          </p>
+          <ul class="service-features-list">
+            <li> Comprehensive Competitor &amp; Market Audits</li>
+            <li> Custom Logo Systems, Style Guides, and Typography Specs</li>
+            <li> Brand Voice &amp; Messaging Playbooks</li>
+            <li> Strategic Roll-out Guidelines &amp; Launch Kits</li>
+          </ul>
+          <button class="btn-primary mini-book-btn">Book Identity Consultation</button>
+        </div>
+        <div class="service-detail-visual">
+          <div class="visual-card">
+            <span class="badge-tag">AUTHORITY</span>
+            <h3>Own Your Market.</h3>
+            <p>A consistent, high-end identity drives trust, enabling your brand to command premium pricing.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-detail-block alt animate-on-scroll" id="web">
+        <div class="service-detail-info">
+          <span class="service-num">04</span>
+          <h2 class="service-detail-title">Web &amp; Organic Growth (SEO)</h2>
+          <p class="service-detail-desc">
+            We build and optimize your web presence to capture search traffic and turn it into passive, compounding lead flow. We develop responsive sites built on next-gen frameworks.
+          </p>
+          <ul class="service-features-list">
+            <li> Full technical SEO audits and website speed optimizations</li>
+            <li> Keyword strategy and programmatic content hubs</li>
+            <li> E-commerce CRO (Conversion Rate Optimization) setups</li>
+            <li> Ongoing link building campaigns and digital PR</li>
+          </ul>
+          <button class="btn-primary mini-book-btn">Book SEO Growth Audit</button>
+        </div>
+        <div class="service-detail-visual">
+          <div class="visual-card">
+            <span class="badge-tag">GROWTH</span>
+            <h3>Compounding Traffic.</h3>
+            <p>While ads stop running when budgets dry up, organic SEO traffic builds over years.</p>
+          </div>
+        </div>
+      </div>
+
+      </section>
+""" + build_footer_block()
+    with open('services.html', 'w', encoding='utf-8') as f:
+        f.write(services_body)
+
+def generate_work():
+    work_body = build_head("Our Work | JayAds") + build_header("work") + """
+  <!-- HERO SECTION -->
+  <section class="work-hero">
+    <div class="hero-bg-mesh"></div>
+    <div class="container hero-content animate-on-scroll">
+      <span class="section-label">SELECTED CASE STUDIES</span>
+      <h1 class="hero-headline">
+        Engineered for Attention.<br />
+        Optimized for <em>Scale</em>.
+      </h1>
+      <p class="hero-sub">
+        Explore our recent campaigns across paid media, brand strategy, and growth marketing.
+      </p>
     </div>
   </section>
 
-  <section class="massive-section bg-marigold" id="social">
-    <h2 class="section-title-mega">Social Commerce <br>&amp; Performance Ads</h2>
-    <p class="section-desc-mega">We build creative that algorithms love and humans click. Stop guessing what works and start testing at scale with our high-volume performance creative engine.</p>
-    
-    <div class="bento-grid">
-      <div class="bento-item bento-col-4 bg-police-blue" style="color: var(--clr-pearl);">
-        <span class="bento-tag">Volume</span>
-        <h3>Creative Fatigue is Dead</h3>
-        <p>You can't scale a Meta or TikTok ad account with one video a month. We deliver batches of 15, 30, or 50 ad variations per sprint.</p>
-        <div class="bento-stat" style="margin-top: 40px;">300%</div>
-        <div class="bento-stat-desc">Avg. ROAS Increase</div>
-      </div>
+  <!-- PORTFOLIO SECTION -->
+  <section class="portfolio-section" style="padding-top: 0;">
+    <div class="container">
       
-      <div class="bento-item bento-col-8">
-        <span class="bento-tag">Framework</span>
-        <h3>The Anatomy of a Winning Ad</h3>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px;">
-          <div>
-            <h4 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 10px;">1. The 3-Second Hook</h4>
-            <p style="font-size: 1rem; opacity: 0.8;">Visual interruption patterns designed specifically to halt the thumb-scroll immediately.</p>
+      <!-- Filter controls -->
+      <div class="portfolio-filters animate-on-scroll">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="video">Paid Ads</button>
+        <button class="filter-btn" data-filter="social">Social Media</button>
+        <button class="filter-btn" data-filter="branding">Branding</button>
+        <button class="filter-btn" data-filter="web">Web Design</button>
+      </div>
+
+            <div class="portfolio-grid">
+        <!-- Project 1 -->
+        <div class="portfolio-card video animate-on-scroll" data-category="video">
+          <div class="portfolio-thumb" style="background: linear-gradient(135deg, #1e1e24 0%, #2f1d42 100%);">
+            <span class="portfolio-tag">Paid Ads</span>
           </div>
-          <div>
-            <h4 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 10px;">2. Native Integration</h4>
-            <p style="font-size: 1rem; opacity: 0.8;">UGC-style content that looks organic to the platform, avoiding the "banner blindness" effect.</p>
+          <div class="portfolio-info">
+            <h3 class="portfolio-title">E-Commerce Retail Brand</h3>
+            <p class="portfolio-desc">Performance marketing campaign designed to scale customer acquisition and drive immediate sales.</p>
+            <span class="portfolio-metrics">Paid Ads • Strategy</span>
           </div>
-          <div>
-            <h4 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 10px;">3. The Value Wedge</h4>
-            <p style="font-size: 1rem; opacity: 0.8;">Rapid problem-agitation-solution frameworks that compress buying decisions into seconds.</p>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="portfolio-card social animate-on-scroll" data-category="social">
+          <div class="portfolio-thumb" style="background: linear-gradient(135deg, #1b263b 0%, #1e1b4b 100%);">
+            <span class="portfolio-tag">Social Media</span>
           </div>
-          <div>
-            <h4 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 10px;">4. Frictionless CTA</h4>
-            <p style="font-size: 1rem; opacity: 0.8;">Direct-response psychological triggers that command immediate off-platform action.</p>
+          <div class="portfolio-info">
+            <h3 class="portfolio-title">FMCG Product Launch</h3>
+            <p class="portfolio-desc">Comprehensive social media strategy and content rollout for a new consumer product line.</p>
+            <span class="portfolio-metrics">Social • Content</span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="portfolio-card branding animate-on-scroll" data-category="branding">
+          <div class="portfolio-thumb" style="background: linear-gradient(135deg, #14213d 0%, #000000 100%);">
+            <span class="portfolio-tag">Branding</span>
+          </div>
+          <div class="portfolio-info">
+            <h3 class="portfolio-title">B2B SaaS Platform</h3>
+            <p class="portfolio-desc">Full brand identity overhaul including positioning, visual guidelines, and market messaging.</p>
+            <span class="portfolio-metrics">Branding • Identity</span>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="portfolio-card web animate-on-scroll" data-category="web">
+          <div class="portfolio-thumb" style="background: linear-gradient(135deg, #240046 0%, #3c096c 100%);">
+            <span class="portfolio-tag">Web Design</span>
+          </div>
+          <div class="portfolio-info">
+            <h3 class="portfolio-title">Tech Startup Portal</h3>
+            <p class="portfolio-desc">High-performance corporate website engineered for rapid lead generation and intuitive user flow.</p>
+            <span class="portfolio-metrics">Web Design • UX/UI</span>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="portfolio-card video animate-on-scroll" data-category="video">
+          <div class="portfolio-thumb" style="background: linear-gradient(135deg, #0d1b2a 0%, #415a77 100%);">
+            <span class="portfolio-tag">Performance Media</span>
+          </div>
+          <div class="portfolio-info">
+            <h3 class="portfolio-title">Real Estate Lead Generation</h3>
+            <p class="portfolio-desc">Data-driven performance media campaign targeting high-intent property buyers across multiple channels.</p>
+            <span class="portfolio-metrics">Performance • Lead Gen</span>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="portfolio-card social animate-on-scroll" data-category="social">
+          <div class="portfolio-thumb" style="background: linear-gradient(135deg, #220901 0%, #621708 100%);">
+            <span class="portfolio-tag">SEO Growth</span>
+          </div>
+          <div class="portfolio-info">
+            <h3 class="portfolio-title">Local Service Provider</h3>
+            <p class="portfolio-desc">Hyper-local SEO strategy that secured top search rankings and drove steady organic inquiries.</p>
+            <span class="portfolio-metrics">SEO • Local Search</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="massive-section bg-citrine" id="web">
-    <h2 class="section-title-mega">Web Architecture <br>&amp; Organic Growth</h2>
-    <p class="section-desc-mega">Traffic without conversion is just server cost. We build insanely fast, beautifully structured web experiences that turn visitors into evangelical customers.</p>
-    
-    <div class="bento-grid">
-      <div class="bento-item bento-col-12" style="background: var(--clr-police-blue); color: var(--clr-pearl);">
-        <div style="display: flex; gap: 60px; align-items: center; flex-wrap: wrap;">
-          <div style="flex: 1; min-width: 300px;">
-            <span class="bento-tag">Tech Stack</span>
-            <h3>Next-Gen Infrastructure</h3>
-            <p>We abandoned slow, bloated WordPress sites years ago. We build on modern JavaScript frameworks to achieve perfect 100/100 Lighthouse scores.</p>
-            <ul class="bento-list" style="margin-top: 30px;">
-              <li>React / Next.js Frontends</li>
-              <li>Headless CMS (Sanity, Contentful)</li>
-              <li>Global Edge CDN Deployment</li>
-              <li>Sub-second LCP and TTI Metrics</li>
-            </ul>
-          </div>
-          <div style="flex: 1; min-width: 300px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-             <div style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: 20px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">
-               <div style="font-size: 2.5rem; font-weight: 900; color: var(--clr-marigold);">100</div>
-               <div style="font-size: 0.9rem; font-weight: 700; text-transform: uppercase;">Lighthouse Score</div>
-             </div>
-             <div style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: 20px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">
-               <div style="font-size: 2.5rem; font-weight: 900; color: var(--clr-marigold);">&lt;0.8s</div>
-               <div style="font-size: 0.9rem; font-weight: 700; text-transform: uppercase;">Load Time</div>
-             </div>
-             <div style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: 20px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">
-               <div style="font-size: 2.5rem; font-weight: 900; color: var(--clr-marigold);">+65%</div>
-               <div style="font-size: 0.9rem; font-weight: 700; text-transform: uppercase;">Conv. Rate</div>
-             </div>
-             <div style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: 20px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">
-               <div style="font-size: 2.5rem; font-weight: 900; color: var(--clr-marigold);">#1</div>
-               <div style="font-size: 0.9rem; font-weight: 700; text-transform: uppercase;">SEO Rankings</div>
-             </div>
-          </div>
+  <!-- Append Portfolio Filtering Script modification -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const portfolioCards = document.querySelectorAll('.portfolio-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          
+          const filterVal = btn.getAttribute('data-filter');
+          
+          portfolioCards.forEach(card => {
+            if (filterVal === 'all') {
+              card.style.display = 'block';
+            } else {
+              if (card.classList.contains(filterVal)) {
+                card.style.display = 'block';
+              } else {
+                card.style.display = 'none';
+              }
+            }
+          });
+        });
+      });
+    });
+  </script>
+""" + build_footer_block()
+    with open('work.html', 'w', encoding='utf-8') as f:
+        f.write(work_body)
+
+def generate_about():
+    about_body = build_head("About &amp; Process | JayAds") + build_header("about") + """
+  <!-- HERO SECTION -->
+  <section class="about-hero bg-buff">
+    <div class="hero-bg-mesh"></div>
+    <div class="container hero-content animate-on-scroll" style="text-align: center;">
+      <span class="section-label" style="color: var(--clr-citrine);">Not an Agency.</span>
+      <h1 class="hero-headline" style="color: var(--clr-citrine); font-size: clamp(3rem, 7vw, 5rem);">
+        An In-House Team.<br />
+        Integrated with <em>Your</em> Brand.
+      </h1>
+      <p class="hero-sub" style="color: var(--bg-primary); max-width: 800px; margin: 20px auto 0;">
+        Traditional agencies are slow, bloated, and prioritize awards over conversions. JayAds operates as a specialized, elite creative strike force built to execute at absolute scale.
+      </p>
+    </div>
+  </section>
+
+  <section class="about-intro-section" style="padding: 100px 0; background: var(--bg-primary);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 60px; align-items: center;">
+        <div class="animate-on-scroll">
+          <span class="section-label">OUR PHILOSOPHY</span>
+          <h2 class="section-heading" style="color: var(--text-primary);">Speed is a Feature.<br />Quality is a Given.</h2>
+          <p style="color: var(--text-primary); opacity: 0.85; line-height: 1.8; margin-bottom: 24px;">
+            In the digital landscape, the brand that tests the most creatives wins. Period. We have engineered our entire business model around eliminating bottlenecks. No account managers playing telephone. No pointless check-in meetings. Just direct access to elite creators and immediate execution.
+          </p>
+          <p style="color: var(--text-primary); opacity: 0.85; line-height: 1.8;">
+            We work on a subscription or sprint model. You get an entire creative strategy and performance marketing department integrated directly into your Slack channels.
+          </p>
+        </div>
+        <div class="animate-on-scroll" style="background: var(--bg-surface); padding: 48px; border-radius: 24px; border: 1px solid var(--border-light); text-align: center;">
+          <div style="font-size: 5rem; font-weight: 900; color: var(--accent-gold); line-height: 1;">0%</div>
+          <div style="font-size: 1.3rem; font-weight: 700; text-transform: uppercase; color: var(--text-primary); margin-top: 10px; margin-bottom: 40px;">Agency Bloat</div>
+          <div style="font-size: 5rem; font-weight: 900; color: var(--accent-gold); line-height: 1;">100%</div>
+          <div style="font-size: 1.3rem; font-weight: 700; text-transform: uppercase; color: var(--text-primary); margin-top: 10px;">Direct Execution</div>
         </div>
       </div>
     </div>
   </section>
-''' + build_footer()
 
-# Build Work
-work_html = build_head("Our Work | JayAds") + '''
-  <section class="massive-section bg-marigold">
-    <div class="bento-grid">
-      <div class="bento-item bento-col-12" style="padding: 120px 50px; text-align: center; border: none; background: transparent; box-shadow: none;">
-        <h1 class="section-title-mega" style="font-size: clamp(4rem, 8vw, 8rem); margin-bottom: 30px; text-transform: uppercase;">Work that <br><span style="color: var(--clr-police-blue);">Stops the Scroll.</span></h1>
-        <p class="section-desc-mega" style="margin: 0 auto; font-size: clamp(1.4rem, 2vw, 2rem); color: var(--clr-police-blue);">We don't build portfolios. We build profit engines. Here is a deconstruction of how we've scaled industry leaders through ruthless creative strategy.</p>
+  <!-- SPRINT TIMELINE -->
+  <section class="process-section" style="padding: 100px 0; background: var(--bg-surface);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 80px;">
+        <span class="section-label">48-HOUR SPRINT PROTOCOL</span>
+        <h2 class="section-heading">How We Execute.</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px;">
+        <!-- Step 1 -->
+        <div class="advantage-card animate-on-scroll">
+          <div style="font-size: 3rem; font-weight: 900; color: var(--accent-gold); margin-bottom: 20px;">T-Minus 0</div>
+          <h3>The Briefing</h3>
+          <p style="color: var(--text-secondary); line-height: 1.6; margin-top: 10px;">
+            We receive your objective via our dedicated Slack channel or Notion portal. Within 2 hours, a strategy framework is approved. No formal meetings required.
+          </p>
+        </div>
+        <!-- Step 2 -->
+        <div class="advantage-card animate-on-scroll">
+          <div style="font-size: 3rem; font-weight: 900; color: var(--accent-gold); margin-bottom: 20px;">Hour 24</div>
+          <h3>Marketing</h3>
+          <p style="color: var(--text-secondary); line-height: 1.6; margin-top: 10px;">
+            Cameras are rolling. Whether it's our in-house cyclorama studio or on location, our crew executes the shot list with ruthless efficiency, uploading proxies in real-time.
+          </p>
+        </div>
+        <!-- Step 3 -->
+        <div class="advantage-card animate-on-scroll">
+          <div style="font-size: 3rem; font-weight: 900; color: var(--accent-gold); margin-bottom: 20px;">Hour 48</div>
+          <h3>Delivery &amp; Launch</h3>
+          <p style="color: var(--text-secondary); line-height: 1.6; margin-top: 10px;">
+            Color-graded, sound-mixed, and formatted assets hit your inbox. Variations are automatically loaded into your ad accounts for immediate A/B testing.
+          </p>
+        </div>
       </div>
     </div>
   </section>
+""" + build_footer_block()
+    with open('about.html', 'w', encoding='utf-8') as f:
+        f.write(about_body)
 
-  <section class="massive-section bg-police-blue">
-    <div class="bento-tag" style="margin-bottom: 40px; font-size: 1.2rem; background: var(--clr-marigold); color: var(--clr-police-blue);">Case Study 01</div>
-    <h2 class="section-title-mega" style="margin-bottom: 10px;">Scaling a Global D2C Titan</h2>
-    <p class="section-desc-mega" style="margin-bottom: 60px; color: var(--clr-pearl); opacity: 0.7;">Fashion & Apparel • Performance Creative • Meta Ads</p>
-
-    <div class="bento-grid">
-      <div class="bento-item bento-col-8" style="background: var(--clr-pearl); color: var(--clr-police-blue);">
-        <h3>The Challenge</h3>
-        <p>The brand had hit a severe plateau at $1M MRR. Creative fatigue on Meta was destroying their CAC. Their internal team couldn't produce high-quality video assets fast enough to feed the algorithm.</p>
-        <h3 style="margin-top: 40px;">The Solution</h3>
-        <p>JayAds deployed a 4-week "Content Avalanche" strategy. We shot 120 unique video hooks in a single 2-day studio session, mapped to 4 distinct buyer personas. We instituted a modular editing framework allowing us to swap hooks, bodies, and CTAs dynamically.</p>
-      </div>
+def generate_contact():
+    contact_body = build_head("Contact Us | JayAds") + build_header("contact") + """
+  <!-- HERO SECTION -->
+  <section class="contact-hero" style="padding-top: 180px; padding-bottom: 80px; background: var(--bg-primary);">
+    <div class="container" style="display:flex; gap: 80px; align-items: flex-start; flex-wrap: wrap;">
       
-      <div class="bento-item bento-col-4" style="background: var(--clr-citrine); color: var(--clr-pearl); display: flex; flex-direction: column; gap: 30px;">
-        <div>
-          <div class="bento-stat" style="color: var(--clr-marigold);">4.2x</div>
-          <div class="bento-stat-desc">Return on Ad Spend</div>
-        </div>
-        <div>
-          <div class="bento-stat" style="color: var(--clr-marigold);">-38%</div>
-          <div class="bento-stat-desc">Cost Per Acquisition</div>
-        </div>
-        <div>
-          <div class="bento-stat" style="color: var(--clr-marigold);">$3.4M</div>
-          <div class="bento-stat-desc">Revenue Generated (Q3)</div>
-        </div>
-      </div>
-
-      <div class="bento-item bento-col-12" style="background: transparent; border: none; padding: 0;">
-        <div class="bento-grid" style="gap: 20px;">
-           <div class="bento-item bento-col-4" style="min-height: 400px; background: #111; position: relative; overflow: hidden;">
-             <div style="position: absolute; top: 20px; left: 20px; background: rgba(0,0,0,0.5); padding: 5px 15px; border-radius: 20px; color: #fff; font-weight: bold; z-index: 10;">Hook Var A</div>
-             <!-- Mock image container -->
-             <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #2E4365, #111); position: absolute; top:0; left:0;"></div>
-           </div>
-           <div class="bento-item bento-col-4" style="min-height: 400px; background: #111; position: relative; overflow: hidden;">
-             <div style="position: absolute; top: 20px; left: 20px; background: rgba(0,0,0,0.5); padding: 5px 15px; border-radius: 20px; color: #fff; font-weight: bold; z-index: 10;">Hook Var B</div>
-             <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #8A3B08, #111); position: absolute; top:0; left:0;"></div>
-           </div>
-           <div class="bento-item bento-col-4" style="min-height: 400px; background: #111; position: relative; overflow: hidden;">
-             <div style="position: absolute; top: 20px; left: 20px; background: rgba(0,0,0,0.5); padding: 5px 15px; border-radius: 20px; color: #fff; font-weight: bold; z-index: 10;">Hook Var C</div>
-             <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #E59D2C, #111); position: absolute; top:0; left:0;"></div>
-           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="massive-section bg-pearl">
-    <div class="bento-tag" style="margin-bottom: 40px; font-size: 1.2rem; background: var(--clr-citrine); color: var(--clr-pearl);">Case Study 02</div>
-    <h2 class="section-title-mega" style="margin-bottom: 10px;">B2B SaaS Lead Generation</h2>
-    <p class="section-desc-mega" style="margin-bottom: 60px; color: var(--clr-police-blue); opacity: 0.7;">Enterprise Tech • Brand Film • Landing Page CRO</p>
-
-    <div class="bento-grid">
-      <div class="bento-item bento-col-5" style="background: var(--clr-police-blue); color: var(--clr-pearl);">
-        <h3 style="color: var(--clr-marigold);">The Anatomy of the Build</h3>
-        <ul class="bento-list" style="margin-top: 30px; gap: 24px;">
-          <li><strong style="color: var(--clr-marigold);">Brand Film:</strong> 90-second cinematic manifesto explaining complex API tech through visual metaphors.</li>
-          <li><strong style="color: var(--clr-marigold);">Web Build:</strong> Complete redesign of the demo booking flow using Next.js for zero-latency loads.</li>
-          <li><strong style="color: var(--clr-marigold);">Distribution:</strong> LinkedIn Account-Based Marketing (ABM) targeting CTOs and VP Engineering.</li>
-        </ul>
-      </div>
-      
-      <div class="bento-item bento-col-7" style="background: var(--clr-buff); color: var(--clr-police-blue);">
-        <h3>The Result</h3>
-        <p>By treating B2B marketing with B2C production values, we shattered industry benchmarks. The brand film achieved a 65% VTR (View-Through Rate) on LinkedIn, driving incredibly high-intent traffic to a newly optimized funnel.</p>
+      <div style="flex: 1; min-width: 300px;">
+        <span class="section-label">GET IN TOUCH</span>
+        <h1 class="hero-headline" style="font-size: clamp(3rem, 6vw, 4.5rem); margin-bottom: 24px;">Let's Talk<br />Growth.</h1>
+        <p style="font-size: 1.25rem; color: var(--text-primary); opacity: 0.85; margin-bottom: 40px; max-width: 500px; line-height: 1.6;">
+          Whether you need a massive performance ad campaign, a full digital rebrand, or an SEO overhaul, our team in Chennai is ready to deploy.
+        </p>
         
-        <div style="display: flex; gap: 40px; margin-top: 40px; flex-wrap: wrap;">
-          <div>
-            <div class="bento-stat" style="color: var(--clr-citrine);">+210%</div>
-            <div class="bento-stat-desc">Demo Requests</div>
-          </div>
-          <div>
-            <div class="bento-stat" style="color: var(--clr-citrine);">$12M</div>
-            <div class="bento-stat-desc">Pipeline Generated</div>
-          </div>
+        <div class="advantage-card" style="background: var(--bg-surface); color: var(--text-primary); padding: 32px; border: 1px solid var(--border-light);">
+          <h3 style="font-size: 1.4rem; margin-bottom: 16px; color: var(--accent-gold);">Headquarters</h3>
+          <p style="font-size: 1.05rem; opacity: 0.85; margin-bottom: 8px; font-style: normal; line-height: 1.6;">
+            Door No. 7, 40/1, 6th St,<br />
+            Kumaran Nagar, A Block,<br />
+            Anna Nagar East,<br />
+            Chennai – 600102, Tamil Nadu, India.
+          </p>
+          <div style="height: 1px; background: var(--border-light); margin: 24px 0;"></div>
+          <h3 style="font-size: 1.4rem; margin-bottom: 16px; color: var(--accent-gold);">Direct Lines</h3>
+          <p style="font-size: 1.05rem; margin-bottom: 8px;"> +91 98765 43210</p>
+          <p style="font-size: 1.05rem;"> hello@jayads.in</p>
         </div>
       </div>
-    </div>
-  </section>
-  
-  <section class="massive-section bg-citrine">
-    <div style="text-align: center; margin-bottom: 80px;">
-      <h2 class="section-title-mega" style="color: var(--clr-pearl);">The Vault</h2>
-      <p class="section-desc-mega" style="color: var(--clr-pearl); margin: 0 auto;">A rapid-fire grid of our recent visual destruction.</p>
-    </div>
-    
-    <div class="bento-grid" style="grid-template-columns: repeat(4, 1fr); gap: 15px;">
-       <div class="bento-item" style="grid-column: span 2; min-height: 300px; background: #fff;"></div>
-       <div class="bento-item" style="grid-column: span 1; min-height: 300px; background: var(--clr-marigold);"></div>
-       <div class="bento-item" style="grid-column: span 1; min-height: 300px; background: var(--clr-police-blue);"></div>
-       
-       <div class="bento-item" style="grid-column: span 1; min-height: 300px; background: var(--clr-buff);"></div>
-       <div class="bento-item" style="grid-column: span 2; min-height: 300px; background: #222;"></div>
-       <div class="bento-item" style="grid-column: span 1; min-height: 300px; background: var(--clr-pearl);"></div>
-    </div>
-  </section>
-''' + build_footer()
-
-# Build About
-about_html = build_head("About & Process | JayAds") + '''
-  <section class="massive-section bg-buff">
-    <div class="bento-grid">
-      <div class="bento-item bento-col-12" style="padding: 120px 50px; text-align: center; border: none; background: transparent; box-shadow: none;">
-        <h1 class="section-title-mega" style="font-size: clamp(4rem, 8vw, 8rem); margin-bottom: 30px; text-transform: uppercase; color: var(--clr-citrine);">Not an Agency.<br><span style="color: var(--clr-police-blue);">An In-House Team.</span></h1>
-        <p class="section-desc-mega" style="margin: 0 auto; font-size: clamp(1.4rem, 2vw, 2rem); color: var(--clr-police-blue);">Traditional agencies are slow, bloated, and prioritize awards over revenue. JayAds operates as a specialized, elite strike force integrated directly into your company's bloodstream.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="massive-section bg-pearl">
-    <div class="bento-grid">
-      <div class="bento-item bento-col-6" style="background: var(--clr-police-blue); color: var(--clr-pearl);">
-        <span class="bento-tag" style="background: var(--clr-marigold); color: var(--clr-police-blue);">Our Philosophy</span>
-        <h3>Speed is a feature.<br>Quality is a given.</h3>
-        <p>In the digital landscape, the brand that tests the most creatives wins. Period. We have engineered our entire business model around eliminating bottlenecks. No account managers playing telephone. No pointless check-in meetings. Just direct access to elite creators and immediate execution.</p>
-        <p>We work exclusively on a subscription or sprint model. You get an entire production studio, post-production house, and performance marketing team for less than the cost of one senior hire.</p>
-      </div>
       
-      <div class="bento-item bento-col-6 bg-marigold" style="color: var(--clr-police-blue); display: flex; flex-direction: column; justify-content: center;">
-        <div style="font-size: 5rem; font-weight: 900; line-height: 1; margin-bottom: 20px;">0%</div>
-        <div style="font-size: 2rem; font-weight: 800; margin-bottom: 40px;">Agency Bloat</div>
-        
-        <div style="font-size: 5rem; font-weight: 900; line-height: 1; margin-bottom: 20px;">100%</div>
-        <div style="font-size: 2rem; font-weight: 800;">Direct Execution</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="massive-section bg-police-blue">
-    <h2 class="section-title-mega" style="color: var(--clr-pearl); text-align: center; margin-bottom: 80px;">The 48-Hour Sprint Protocol</h2>
-    
-    <div class="bento-grid">
-      <div class="bento-item bento-col-4" style="background: var(--clr-pearl); color: var(--clr-police-blue);">
-        <div style="font-size: 3rem; font-weight: 900; color: var(--clr-citrine); margin-bottom: 20px;">T-Minus 0</div>
-        <h3>The Briefing</h3>
-        <p>We receive your objective via our dedicated Slack channel or Notion portal. Within 2 hours, a strategy framework is approved. No formal meetings required.</p>
-      </div>
-      
-      <div class="bento-item bento-col-4" style="background: var(--clr-buff); color: var(--clr-citrine);">
-        <div style="font-size: 3rem; font-weight: 900; color: var(--clr-police-blue); margin-bottom: 20px;">Hour 24</div>
-        <h3>Production</h3>
-        <p>Cameras are rolling. Whether it's our in-house cyclorama studio or on location, our crew executes the shot list with ruthless efficiency, uploading proxies in real-time.</p>
-      </div>
-      
-      <div class="bento-item bento-col-4" style="background: var(--clr-marigold); color: var(--clr-police-blue);">
-        <div style="font-size: 3rem; font-weight: 900; color: var(--clr-pearl); margin-bottom: 20px;">Hour 48</div>
-        <h3>Delivery & Launch</h3>
-        <p>Color-graded, sound-mixed, and formatted assets hit your inbox. Variations are automatically loaded into your ad accounts for immediate A/B testing.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="massive-section bg-citrine">
-    <div class="bento-grid">
-      <div class="bento-item bento-col-12" style="background: var(--clr-pearl); color: var(--clr-police-blue); text-align: center;">
-        <h2 class="section-title-mega" style="margin-bottom: 20px;">The Arsenal</h2>
-        <p class="section-desc-mega" style="margin: 0 auto 60px;">We own all our gear. We host all our software. No rentals, no delays.</p>
-        
-        <div class="bento-grid" style="grid-template-columns: repeat(3, 1fr); text-align: left;">
+      <div style="flex: 1; min-width: 300px; background: var(--bg-surface); padding: 48px; border-radius: 24px; border: 1px solid var(--border-light); color: var(--text-primary);">
+        <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 32px; color: var(--text-primary);">Send an Inquiry</h2>
+        <form id="direct-contact-form" style="display:flex; flex-direction:column; gap: 20px;">
           <div>
-            <h4 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; color: var(--clr-citrine);">Camera & Lighting</h4>
-            <ul class="bento-list">
-              <li>RED V-Raptor 8K VV</li>
-              <li>ARRI Alexa Mini</li>
-              <li>Sony FX6 / A7SIII Fleet</li>
-              <li>Aputure 1200d Pro & Nova Grid</li>
-              <li>Atlas Orion Anamorphic Lenses</li>
-            </ul>
+            <label style="font-size: 0.85rem; font-weight:600; margin-bottom:8px; display:block; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary);">Full Name *</label>
+            <input type="text" placeholder="Jayanth S." style="width:100%; padding: 14px 16px; border-radius: 8px; border: 1px solid var(--border-subtle); background: var(--bg-primary); color: var(--text-primary);" required />
           </div>
           <div>
-            <h4 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; color: var(--clr-citrine);">Post-Production</h4>
-            <ul class="bento-list">
-              <li>M2 Ultra Mac Studio Network</li>
-              <li>DaVinci Resolve Advanced Panels</li>
-              <li>Adobe Creative Cloud Enterprise</li>
-              <li>Cinema 4D & Unreal Engine 5</li>
-              <li>100TB High-Speed NAS</li>
-            </ul>
+            <label style="font-size: 0.85rem; font-weight:600; margin-bottom:8px; display:block; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary);">Work Email *</label>
+            <input type="email" placeholder="name@brand.com" style="width:100%; padding: 14px 16px; border-radius: 8px; border: 1px solid var(--border-subtle); background: var(--bg-primary); color: var(--text-primary);" required />
           </div>
           <div>
-            <h4 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; color: var(--clr-citrine);">Web & Growth</h4>
-            <ul class="bento-list">
-              <li>Next.js / React</li>
-              <li>Vercel Edge Infrastructure</li>
-              <li>Figma Pro (Auto-layout Masters)</li>
-              <li>Sanity Headless CMS</li>
-              <li>TripleWhale Analytics</li>
-            </ul>
+            <label style="font-size: 0.85rem; font-weight:600; margin-bottom:8px; display:block; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary);">Company / Brand Name</label>
+            <input type="text" placeholder="JayAds Ltd." style="width:100%; padding: 14px 16px; border-radius: 8px; border: 1px solid var(--border-subtle); background: var(--bg-primary); color: var(--text-primary);" />
           </div>
+          <div>
+            <label style="font-size: 0.85rem; font-weight:600; margin-bottom:8px; display:block; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary);">Message *</label>
+            <textarea rows="4" placeholder="Tell us about your project timeline and goals..." style="width:100%; padding: 14px 16px; border-radius: 8px; border: 1px solid var(--border-subtle); background: var(--bg-primary); color: var(--text-primary);" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary form-submit-btn" style="width:100%; justify-content:center; padding: 16px; font-weight: bold;">Send Message →</button>
+        </form>
+        <div id="contact-success-state" style="display:none; text-align:center; padding: 20px 0;">
+          <div style="font-size: 3rem; color: var(--accent-gold); margin-bottom: 16px;"></div>
+          <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 8px;">Inquiry Sent Successfully!</h3>
+          <p style="font-size: 0.95rem; opacity: 0.8;">Our campaign directors will review your details and respond within 2 hours.</p>
         </div>
       </div>
+
     </div>
   </section>
-''' + build_footer()
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const contactForm = document.getElementById('direct-contact-form');
+      const successState = document.getElementById('contact-success-state');
+      if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          contactForm.style.display = 'none';
+          if (successState) successState.style.display = 'block';
+        });
+      }
+    });
+  </script>
+""" + build_footer_block()
+    with open('contact.html', 'w', encoding='utf-8') as f:
+        f.write(contact_body)
 
-with open('services.html', 'w', encoding='utf-8') as f:
-    f.write(services_html)
-
-with open('work.html', 'w', encoding='utf-8') as f:
-    f.write(work_html)
-
-with open('about.html', 'w', encoding='utf-8') as f:
-    f.write(about_html)
-
-print("All files generated successfully.")
+if __name__ == "__main__":
+    generate_services()
+    generate_work()
+    generate_about()
+    generate_contact()
+    print("Sub-pages (services, work, about, contact) compiled successfully.")

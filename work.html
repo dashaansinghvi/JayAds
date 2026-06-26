@@ -3,105 +3,121 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Work | JayAds — Portfolio of Cinematic Campaigns</title>
-  <meta name="description" content="Browse JayAds' work and creative campaigns. Witness high-performing digital marketing campaigns, ad films, and visual brand systems." />
+  <title>Our Work | JayAds</title>
+  <meta name="description" content="JayAds is Chennai's premium digital marketing agency. Performance ads, social commerce, brand strategy &amp; web growth." />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="work-page">
-
+<body class="services-page">
   <!-- Noise Overlay & Preloader -->
   <div class="noise-overlay" aria-hidden="true"></div>
   <div class="preloader" id="preloader">
     <div class="preloader-inner">
       <div class="preloader-logo"><span class="logo-accent">Jay</span>Ads</div>
       <div class="preloader-bar"><div class="preloader-fill"></div></div>
-      <p class="preloader-text">Loading Gallery…</p>
+      <p class="preloader-text">Loading Capabilities…</p>
     </div>
   </div>
-
-
-  <div class="scroll-progress" id="scroll-progress"></div>
-
-  <!-- HEADER -->
-  <header class="site-header" id="site-header">
+  <div class="scroll-progress" id="scroll-progress"></div>  <header class="site-header" id="site-header">
     <div class="header-inner">
       <a href="index.html" class="logo" aria-label="JayAds Home">
         <span class="logo-accent">Jay</span>Ads
       </a>
 
-      <nav class="nav-links" id="nav-links" role="navigation">
+      <nav class="nav-links" id="nav-links" role="navigation" aria-label="Main Navigation">
+        <a href="index.html" class="nav-home-link" data-section="home">Home</a>
         <div class="nav-item-dropdown">
-          <a href="services.html" class="dropdown-trigger" data-section="services">Services <span class="chevron">▼</span></a>
+          <a href="services.html" class="dropdown-trigger" data-section="services">Services <svg class="chevron-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px; vertical-align:middle; margin-bottom:3px; opacity:0.8;"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
           <div class="mega-dropdown">
             <div class="mega-dropdown-inner">
               <div class="mega-col-links">
-                <a href="services.html#ad-films" class="mega-link-item">
-                  <span class="mega-link-icon">🎬</span>
+                <span class="mega-title">Growth & Marketing</span>
+                <a href="services.html#digital-marketing" class="mega-link-item">
+                  <div class="mega-link-icon" style="width:24px;height:24px;display:flex;align-items:center;justify-content:center;color:var(--accent-gold);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                  </div>
                   <div>
-                    <span class="mega-link-title">Ad Films &amp; Video Production</span>
-                    <span class="mega-link-desc">Cinematic ad films, motion graphics, color grading.</span>
+                    <span class="mega-link-title">Digital Marketing Strategy</span>
+                    <span class="mega-link-desc">Data-driven growth plans</span>
                   </div>
                 </a>
-                <a href="services.html#social" class="mega-link-item">
-                  <span class="mega-link-icon">⚡</span>
+                <a href="services.html#seo" class="mega-link-item">
+                  <div class="mega-link-icon" style="width:24px;height:24px;display:flex;align-items:center;justify-content:center;color:var(--accent-gold);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  </div>
                   <div>
-                    <span class="mega-link-title">Social Commerce &amp; Ads</span>
-                    <span class="mega-link-desc">Rapid-fire performance creative for social platforms.</span>
+                    <span class="mega-link-title">Organic Growth (SEO)</span>
+                    <span class="mega-link-desc">Long-term search visibility</span>
                   </div>
                 </a>
-                <a href="services.html#brand" class="mega-link-item">
-                  <span class="mega-link-icon">🏆</span>
-                  <div>
-                    <span class="mega-link-title">Brand Strategy &amp; Identity</span>
-                    <span class="mega-link-desc">Complete visual identities &amp; communication plans.</span>
+                <a href="services.html#paid-ads" class="mega-link-item">
+                  <div class="mega-link-icon" style="width:24px;height:24px;display:flex;align-items:center;justify-content:center;color:var(--accent-gold);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                   </div>
-                </a>
-                <a href="services.html#web" class="mega-link-item">
-                  <span class="mega-link-icon">✦</span>
                   <div>
-                    <span class="mega-link-title">Web &amp; Organic Growth</span>
-                    <span class="mega-link-desc">Premium SEO architecture &amp; high-converting web builds.</span>
+                    <span class="mega-link-title">Paid Advertising</span>
+                    <span class="mega-link-desc">Google Ads &amp; Meta Campaigns</span>
                   </div>
                 </a>
               </div>
-              <div class="mega-col-featured">
-                <div class="mega-featured-card">
-                  <span class="featured-tag">Free Strategy</span>
-                  <h4>Ready to scale?</h4>
-                  <p>Book a direct session with our team to map your brand's growth blueprint.</p>
-                  <button class="btn-primary mini-book-btn">Book a Session</button>
-                </div>
+              <div class="mega-col-links">
+                <span class="mega-title">Design & Consulting</span>
+                <a href="services.html#web-design" class="mega-link-item">
+                  <div class="mega-link-icon" style="width:24px;height:24px;display:flex;align-items:center;justify-content:center;color:var(--accent-gold);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                  </div>
+                  <div>
+                    <span class="mega-link-title">Website Design</span>
+                    <span class="mega-link-desc">High-converting online presence</span>
+                  </div>
+                </a>
+                <a href="services.html#branding" class="mega-link-item">
+                  <div class="mega-link-icon" style="width:24px;height:24px;display:flex;align-items:center;justify-content:center;color:var(--accent-gold);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  </div>
+                  <div>
+                    <span class="mega-link-title">Brand Identity</span>
+                    <span class="mega-link-desc">Positioning and visual assets</span>
+                  </div>
+                </a>
+                <a href="services.html#consulting" class="mega-link-item">
+                  <div class="mega-link-icon" style="width:24px;height:24px;display:flex;align-items:center;justify-content:center;color:var(--accent-gold);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  </div>
+                  <div>
+                    <span class="mega-link-title">Marketing Consulting</span>
+                    <span class="mega-link-desc">Expert strategy and advisory</span>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
         </div>
-        <a href="work.html" class="active" data-section="portfolio">Our Work</a>
-        <a href="about.html" data-section="process">About &amp; Process</a>
-        <a href="index.html#testimonials" data-section="testimonials">Testimonials</a>
-        <a href="contact.html" data-section="contact">Contact</a>
+        <a href="work.html" class="active" data-section="portfolio">Work</a>
+        <a href="about.html"  data-section="process">About</a>
       </nav>
 
-      <button class="nav-cta desktop-only" id="nav-book-btn">Book a Call</button>
+      <button class="nav-cta desktop-only" id="nav-book-btn" aria-label="Book a Call">Book a Call</button>
+
       <button class="hamburger" id="hamburger" aria-label="Open Menu" aria-expanded="false">
-        <span></span><span></span><span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </div>
 
     <!-- Mobile Menu Overlay -->
     <div class="mobile-nav" id="mobile-nav">
-      <a href="services.html">Services</a>
-      <a href="work.html" class="active">Our Work</a>
-      <a href="about.html">About &amp; Process</a>
-      <a href="index.html#testimonials">Testimonials</a>
-      <a href="contact.html">Contact</a>
-      <button class="nav-cta mobile-book-btn">Book a Call</button>
+      <a href="index.html" >Home</a>
+      <a href="services.html" >Services</a>
+      <a href="work.html" class='active'>Work</a>
+      <a href="about.html" >About</a>
+      <button class="nav-cta mobile-book-btn" id="mobile-book-btn">Book a Call</button>
     </div>
   </header>
-
   <!-- HERO SECTION -->
   <section class="work-hero">
     <div class="hero-bg-mesh"></div>
@@ -112,7 +128,7 @@
         Optimized for <em>Scale</em>.
       </h1>
       <p class="hero-sub">
-        Explore our recent campaigns across ad films, brand strategy, and growth marketing.
+        Explore our recent campaigns across paid media, brand strategy, and growth marketing.
       </p>
     </div>
   </section>
@@ -124,36 +140,34 @@
       <!-- Filter controls -->
       <div class="portfolio-filters animate-on-scroll">
         <button class="filter-btn active" data-filter="all">All Projects</button>
-        <button class="filter-btn" data-filter="video">Ad Films</button>
-        <button class="filter-btn" data-filter="social">Social Commerce</button>
+        <button class="filter-btn" data-filter="video">Paid Ads</button>
+        <button class="filter-btn" data-filter="social">Social Media</button>
         <button class="filter-btn" data-filter="branding">Branding</button>
         <button class="filter-btn" data-filter="web">Web Design</button>
       </div>
 
-      <div class="portfolio-grid">
+            <div class="portfolio-grid">
         <!-- Project 1 -->
         <div class="portfolio-card video animate-on-scroll" data-category="video">
           <div class="portfolio-thumb" style="background: linear-gradient(135deg, #1e1e24 0%, #2f1d42 100%);">
-            <span class="portfolio-tag">Ad Film</span>
-            <div class="portfolio-result">10M+ Views</div>
+            <span class="portfolio-tag">Paid Ads</span>
           </div>
           <div class="portfolio-info">
-            <h3 class="portfolio-title">Red Bull Chennai Showdown</h3>
-            <p class="portfolio-desc">High-octane action film showcasing extreme sports in the streets of Chennai.</p>
-            <span class="portfolio-metrics">⚡ 10M+ Views • +42% Brand Recall</span>
+            <h3 class="portfolio-title">E-Commerce Retail Brand</h3>
+            <p class="portfolio-desc">Performance marketing campaign designed to scale customer acquisition and drive immediate sales.</p>
+            <span class="portfolio-metrics">Paid Ads • Strategy</span>
           </div>
         </div>
 
         <!-- Project 2 -->
         <div class="portfolio-card social animate-on-scroll" data-category="social">
           <div class="portfolio-thumb" style="background: linear-gradient(135deg, #1b263b 0%, #1e1b4b 100%);">
-            <span class="portfolio-tag">Social Commerce</span>
-            <div class="portfolio-result">3.8x ROAS</div>
+            <span class="portfolio-tag">Social Media</span>
           </div>
           <div class="portfolio-info">
-            <h3 class="portfolio-title">Britannia Milk Bikis Campaign</h3>
-            <p class="portfolio-desc">Full social strategy and direct-response vertical video series driving offline purchases.</p>
-            <span class="portfolio-metrics">⚡ 3.8x ROAS • +180% Web Orders</span>
+            <h3 class="portfolio-title">FMCG Product Launch</h3>
+            <p class="portfolio-desc">Comprehensive social media strategy and content rollout for a new consumer product line.</p>
+            <span class="portfolio-metrics">Social • Content</span>
           </div>
         </div>
 
@@ -161,12 +175,11 @@
         <div class="portfolio-card branding animate-on-scroll" data-category="branding">
           <div class="portfolio-thumb" style="background: linear-gradient(135deg, #14213d 0%, #000000 100%);">
             <span class="portfolio-tag">Branding</span>
-            <div class="portfolio-result">Identity Rebrand</div>
           </div>
           <div class="portfolio-info">
-            <h3 class="portfolio-title">Decathlon Summer Fest</h3>
-            <p class="portfolio-desc">Bespoke campaign identity, typography system, and marketing guidelines.</p>
-            <span class="portfolio-metrics">⚡ Complete Rebrand • 100% Client Satisfaction</span>
+            <h3 class="portfolio-title">B2B SaaS Platform</h3>
+            <p class="portfolio-desc">Full brand identity overhaul including positioning, visual guidelines, and market messaging.</p>
+            <span class="portfolio-metrics">Branding • Identity</span>
           </div>
         </div>
 
@@ -174,45 +187,69 @@
         <div class="portfolio-card web animate-on-scroll" data-category="web">
           <div class="portfolio-thumb" style="background: linear-gradient(135deg, #240046 0%, #3c096c 100%);">
             <span class="portfolio-tag">Web Design</span>
-            <div class="portfolio-result">98 Speed Score</div>
           </div>
           <div class="portfolio-info">
-            <h3 class="portfolio-title">AURA Premium Jewelry Store</h3>
-            <p class="portfolio-desc">E-commerce storefront designed with clean micro-interactions and fast checkout flow.</p>
-            <span class="portfolio-metrics">⚡ 98 Google PageSpeed • +55% Conversions</span>
+            <h3 class="portfolio-title">Tech Startup Portal</h3>
+            <p class="portfolio-desc">High-performance corporate website engineered for rapid lead generation and intuitive user flow.</p>
+            <span class="portfolio-metrics">Web Design • UX/UI</span>
           </div>
         </div>
 
         <!-- Project 5 -->
         <div class="portfolio-card video animate-on-scroll" data-category="video">
           <div class="portfolio-thumb" style="background: linear-gradient(135deg, #0d1b2a 0%, #415a77 100%);">
-            <span class="portfolio-tag">Ad Film</span>
-            <div class="portfolio-result">Cinematic</div>
+            <span class="portfolio-tag">Performance Media</span>
           </div>
           <div class="portfolio-info">
-            <h3 class="portfolio-title">Royal Enfield Cruise Campaign</h3>
-            <p class="portfolio-desc">A visual narrative honoring Chennai's classic bike culture and coastal highway rides.</p>
-            <span class="portfolio-metrics">⚡ Cinematic Story • +30% Lead Forms</span>
+            <h3 class="portfolio-title">Real Estate Lead Generation</h3>
+            <p class="portfolio-desc">Data-driven performance media campaign targeting high-intent property buyers across multiple channels.</p>
+            <span class="portfolio-metrics">Performance • Lead Gen</span>
           </div>
         </div>
 
         <!-- Project 6 -->
         <div class="portfolio-card social animate-on-scroll" data-category="social">
-          <div class="portfolio-thumb" style="background: linear-gradient(135deg, #4a148c 0%, #1a237e 100%);">
-            <span class="portfolio-tag">Social Commerce</span>
-            <div class="portfolio-result">4.2x ROAS</div>
+          <div class="portfolio-thumb" style="background: linear-gradient(135deg, #220901 0%, #621708 100%);">
+            <span class="portfolio-tag">SEO Growth</span>
           </div>
           <div class="portfolio-info">
-            <h3 class="portfolio-title">Cult.fit Fitness Challenge</h3>
-            <p class="portfolio-desc">Gamified Instagram reel creative sequence converting views into program signups.</p>
-            <span class="portfolio-metrics">⚡ 4.2x Meta ROAS • 25k Registrations</span>
+            <h3 class="portfolio-title">Local Service Provider</h3>
+            <p class="portfolio-desc">Hyper-local SEO strategy that secured top search rankings and drove steady organic inquiries.</p>
+            <span class="portfolio-metrics">SEO • Local Search</span>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
+  <!-- Append Portfolio Filtering Script modification -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const portfolioCards = document.querySelectorAll('.portfolio-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          
+          const filterVal = btn.getAttribute('data-filter');
+          
+          portfolioCards.forEach(card => {
+            if (filterVal === 'all') {
+              card.style.display = 'block';
+            } else {
+              if (card.classList.contains(filterVal)) {
+                card.style.display = 'block';
+              } else {
+                card.style.display = 'none';
+              }
+            }
+          });
+        });
+      });
+    });
+  </script>
   <!-- CTA CONVERSION SECTION -->
   <section class="final-cta">
     <div class="cta-bg-orb"></div>
@@ -220,7 +257,7 @@
       <p class="section-label">Want Similar Results?</p>
       <h2 class="cta-headline">Let's Design Your Breakthrough.</h2>
       <p class="cta-description">
-        Schedule a consultation with our campaign builders to construct a custom production timeline.
+        Schedule a consultation with our campaign builders to construct a custom marketing timeline.
       </p>
       <button class="btn-cta-large" id="cta-book-btn">Book Your Strategy Call</button>
     </div>
@@ -233,15 +270,15 @@
         <div class="footer-grid">
           <div class="footer-column footer-brand">
             <a href="index.html" class="logo"><span class="logo-accent">Jay</span>Ads</a>
-            <p class="footer-about">Chennai's premium in-house production and digital growth team.</p>
+            <p class="footer-about">Chennai's premium in-house marketing and digital growth team.</p>
           </div>
           <div class="footer-column">
             <h4 class="footer-heading">Explore</h4>
             <div class="footer-links">
               <a href="index.html">Home</a>
               <a href="services.html">Services</a>
-              <a href="about.html">About &amp; Process</a>
-              <a href="contact.html">Contact</a>
+              <a href="about.html">About</a>
+              <a href="work.html">Work</a>
             </div>
           </div>
           <div class="footer-column">
@@ -278,7 +315,7 @@
         <p class="modal-subtitle">We'll respond within 2 hours.</p>
       </div>
       <div class="modal-success" id="modal-success" style="display:none;">
-        <div class="success-icon">✓</div>
+        <div class="success-icon"></div>
         <h3>You're Booked In!</h3>
         <button class="btn-primary" onclick="closeModal();">Close</button>
       </div>
@@ -288,9 +325,9 @@
         <div class="form-group">
           <select id="booking-service" class="form-select" required>
             <option value="" disabled selected>Select Goal</option>
-            <option value="ad-films">🎬 Ad Films &amp; Video Production</option>
-            <option value="social-commerce">⚡ Social Commerce Ads</option>
-            <option value="branding">🏆 Brand Strategy</option>
+            <option value="paid-ads"> Paid Ads &amp; Performance Marketing</option>
+            <option value="social-commerce"> Social Commerce Ads</option>
+            <option value="branding"> Brand Strategy</option>
             <option value="organic-growth">✦ Web Design &amp; SEO</option>
           </select>
         </div>
@@ -304,11 +341,11 @@
     window.addEventListener('load', () => {
       const preloader = document.getElementById('preloader');
       setTimeout(() => {
+        document.body.classList.add('loaded');
         preloader.classList.add('fade-out');
         setTimeout(() => preloader.style.display = 'none', 600);
       }, 600);
     });
-
 
     window.addEventListener('scroll', () => {
       const scrollProgress = document.getElementById('scroll-progress');
@@ -331,7 +368,7 @@
     }
     function closeModal() { modalOverlay.classList.remove('active'); }
 
-    document.querySelectorAll('.mini-book-btn, #nav-book-btn, #cta-book-btn, #footer-cta-btn').forEach(btn => {
+    document.querySelectorAll('.mini-book-btn, #nav-book-btn, #cta-book-btn, #footer-cta-btn, .hero-book-btn').forEach(btn => {
       btn.addEventListener('click', openModal);
     });
     document.getElementById('modal-close').addEventListener('click', closeModal);
@@ -348,32 +385,6 @@
     hamburger.addEventListener('click', () => {
       hamburger.classList.toggle('active');
       mobileNav.classList.toggle('active');
-    });
-
-    // Portfolio filters
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const portfolioCards = document.querySelectorAll('.portfolio-card');
-
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        // Toggle active button
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        
-        const filterVal = btn.getAttribute('data-filter');
-        
-        portfolioCards.forEach(card => {
-          if (filterVal === 'all') {
-            card.style.display = 'block';
-          } else {
-            if (card.classList.contains(filterVal)) {
-              card.style.display = 'block';
-            } else {
-              card.style.display = 'none';
-            }
-          }
-        });
-      });
     });
 
     // Animate on scroll observer

@@ -3,201 +3,205 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About &amp; Process | JayAds — In-House Cinematic Agency</title>
-  <meta name="description" content="Discover the story behind JayAds. Headed by Jayanth S., we combine high-end cinema tools with digital growth architecture in Chennai." />
+  <title>About &amp; Process | JayAds</title>
+  <meta name="description" content="JayAds is Chennai's premium digital marketing agency. Performance ads, social commerce, brand strategy &amp; web growth." />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="about-page">
-
+<body class="services-page">
   <!-- Noise Overlay & Preloader -->
   <div class="noise-overlay" aria-hidden="true"></div>
   <div class="preloader" id="preloader">
     <div class="preloader-inner">
       <div class="preloader-logo"><span class="logo-accent">Jay</span>Ads</div>
       <div class="preloader-bar"><div class="preloader-fill"></div></div>
-      <p class="preloader-text">Loading Story…</p>
+      <p class="preloader-text">Loading Capabilities…</p>
     </div>
   </div>
-
-
-  <div class="scroll-progress" id="scroll-progress"></div>
-
-  <!-- HEADER -->
-  <header class="site-header" id="site-header">
+  <div class="scroll-progress" id="scroll-progress"></div>  <header class="site-header" id="site-header">
     <div class="header-inner">
       <a href="index.html" class="logo" aria-label="JayAds Home">
         <span class="logo-accent">Jay</span>Ads
       </a>
 
-      <nav class="nav-links" id="nav-links" role="navigation">
+      <nav class="nav-links" id="nav-links" role="navigation" aria-label="Main Navigation">
+        <a href="index.html" class="nav-home-link" data-section="home">Home</a>
         <div class="nav-item-dropdown">
-          <a href="services.html" class="dropdown-trigger" data-section="services">Services <span class="chevron">▼</span></a>
+          <a href="services.html" class="dropdown-trigger" data-section="services">Services <svg class="chevron-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px; vertical-align:middle; margin-bottom:3px; opacity:0.8;"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
           <div class="mega-dropdown">
             <div class="mega-dropdown-inner">
               <div class="mega-col-links">
-                <a href="services.html#ad-films" class="mega-link-item">
-                  <span class="mega-link-icon">🎬</span>
+                <span class="mega-title">Growth & Marketing</span>
+                <a href="services.html#digital-marketing" class="mega-link-item">
+                  <div class="mega-link-icon" style="width:24px;height:24px;display:flex;align-items:center;justify-content:center;color:var(--accent-gold);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                  </div>
                   <div>
-                    <span class="mega-link-title">Ad Films &amp; Video Production</span>
-                    <span class="mega-link-desc">Cinematic ad films, motion graphics, color grading.</span>
+                    <span class="mega-link-title">Digital Marketing Strategy</span>
+                    <span class="mega-link-desc">Data-driven growth plans</span>
                   </div>
                 </a>
-                <a href="services.html#social" class="mega-link-item">
-                  <span class="mega-link-icon">⚡</span>
+                <a href="services.html#seo" class="mega-link-item">
+                  <div class="mega-link-icon" style="width:24px;height:24px;display:flex;align-items:center;justify-content:center;color:var(--accent-gold);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  </div>
                   <div>
-                    <span class="mega-link-title">Social Commerce &amp; Ads</span>
-                    <span class="mega-link-desc">Rapid-fire performance creative for social platforms.</span>
+                    <span class="mega-link-title">Organic Growth (SEO)</span>
+                    <span class="mega-link-desc">Long-term search visibility</span>
                   </div>
                 </a>
-                <a href="services.html#brand" class="mega-link-item">
-                  <span class="mega-link-icon">🏆</span>
-                  <div>
-                    <span class="mega-link-title">Brand Strategy &amp; Identity</span>
-                    <span class="mega-link-desc">Complete visual identities &amp; communication plans.</span>
+                <a href="services.html#paid-ads" class="mega-link-item">
+                  <div class="mega-link-icon" style="width:24px;height:24px;display:flex;align-items:center;justify-content:center;color:var(--accent-gold);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                   </div>
-                </a>
-                <a href="services.html#web" class="mega-link-item">
-                  <span class="mega-link-icon">✦</span>
                   <div>
-                    <span class="mega-link-title">Web &amp; Organic Growth</span>
-                    <span class="mega-link-desc">Premium SEO architecture &amp; high-converting web builds.</span>
+                    <span class="mega-link-title">Paid Advertising</span>
+                    <span class="mega-link-desc">Google Ads &amp; Meta Campaigns</span>
                   </div>
                 </a>
               </div>
-              <div class="mega-col-featured">
-                <div class="mega-featured-card">
-                  <span class="featured-tag">Free Strategy</span>
-                  <h4>Ready to scale?</h4>
-                  <p>Book a direct session with our team to map your brand's growth blueprint.</p>
-                  <button class="btn-primary mini-book-btn">Book a Session</button>
-                </div>
+              <div class="mega-col-links">
+                <span class="mega-title">Design & Consulting</span>
+                <a href="services.html#web-design" class="mega-link-item">
+                  <div class="mega-link-icon" style="width:24px;height:24px;display:flex;align-items:center;justify-content:center;color:var(--accent-gold);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                  </div>
+                  <div>
+                    <span class="mega-link-title">Website Design</span>
+                    <span class="mega-link-desc">High-converting online presence</span>
+                  </div>
+                </a>
+                <a href="services.html#branding" class="mega-link-item">
+                  <div class="mega-link-icon" style="width:24px;height:24px;display:flex;align-items:center;justify-content:center;color:var(--accent-gold);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  </div>
+                  <div>
+                    <span class="mega-link-title">Brand Identity</span>
+                    <span class="mega-link-desc">Positioning and visual assets</span>
+                  </div>
+                </a>
+                <a href="services.html#consulting" class="mega-link-item">
+                  <div class="mega-link-icon" style="width:24px;height:24px;display:flex;align-items:center;justify-content:center;color:var(--accent-gold);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  </div>
+                  <div>
+                    <span class="mega-link-title">Marketing Consulting</span>
+                    <span class="mega-link-desc">Expert strategy and advisory</span>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
         </div>
-        <a href="work.html" data-section="portfolio">Our Work</a>
-        <a href="about.html" class="active" data-section="process">About &amp; Process</a>
-        <a href="index.html#testimonials" data-section="testimonials">Testimonials</a>
-        <a href="contact.html" data-section="contact">Contact</a>
+        <a href="work.html"  data-section="portfolio">Work</a>
+        <a href="about.html" class="active" data-section="process">About</a>
       </nav>
 
-      <button class="nav-cta desktop-only" id="nav-book-btn">Book a Call</button>
+      <button class="nav-cta desktop-only" id="nav-book-btn" aria-label="Book a Call">Book a Call</button>
+
       <button class="hamburger" id="hamburger" aria-label="Open Menu" aria-expanded="false">
-        <span></span><span></span><span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </div>
 
     <!-- Mobile Menu Overlay -->
     <div class="mobile-nav" id="mobile-nav">
-      <a href="services.html">Services</a>
-      <a href="work.html">Our Work</a>
-      <a href="about.html" class="active">About &amp; Process</a>
-      <a href="index.html#testimonials">Testimonials</a>
-      <a href="contact.html">Contact</a>
-      <button class="nav-cta mobile-book-btn">Book a Call</button>
+      <a href="index.html" >Home</a>
+      <a href="services.html" >Services</a>
+      <a href="work.html" >Work</a>
+      <a href="about.html" class='active'>About</a>
+      <button class="nav-cta mobile-book-btn" id="mobile-book-btn">Book a Call</button>
     </div>
   </header>
-
   <!-- HERO SECTION -->
-  <section class="about-hero">
+  <section class="about-hero bg-buff">
     <div class="hero-bg-mesh"></div>
-    <div class="container hero-content animate-on-scroll">
-      <span class="section-label">THE STORY OF JAYADS</span>
-      <h1 class="hero-headline">
-        Cinematic Vision.<br />
-        Performance-Driven <em>Results</em>.
+    <div class="container hero-content animate-on-scroll" style="text-align: center;">
+      <span class="section-label" style="color: var(--clr-citrine);">Not an Agency.</span>
+      <h1 class="hero-headline" style="color: var(--clr-citrine); font-size: clamp(3rem, 7vw, 5rem);">
+        An In-House Team.<br />
+        Integrated with <em>Your</em> Brand.
       </h1>
-      <p class="hero-sub">
-        Operating out of Anna Nagar, Chennai, JayAds was founded by Jayanth S. to shatter the slow-paced agency models and deliver world-class creative assets with rapid speed.
+      <p class="hero-sub" style="color: var(--bg-primary); max-width: 800px; margin: 20px auto 0;">
+        Traditional agencies are slow, bloated, and prioritize awards over conversions. JayAds operates as a specialized, elite creative strike force built to execute at absolute scale.
       </p>
     </div>
   </section>
 
-  <!-- VALUES SECTION -->
-  <section class="values-section">
+  <section class="about-intro-section" style="padding: 100px 0; background: var(--bg-primary);">
     <div class="container">
-      <div class="values-grid">
-        <div class="value-card animate-on-scroll">
-          <div class="value-icon">⚡</div>
-          <h3>Unmatched Velocity</h3>
-          <p>
-            Traditional agencies take weeks to approve scripts and schedule shoots. We script, cast, shoot, and color-grade same-day.
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 60px; align-items: center;">
+        <div class="animate-on-scroll">
+          <span class="section-label">OUR PHILOSOPHY</span>
+          <h2 class="section-heading" style="color: var(--text-primary);">Speed is a Feature.<br />Quality is a Given.</h2>
+          <p style="color: var(--text-primary); opacity: 0.85; line-height: 1.8; margin-bottom: 24px;">
+            In the digital landscape, the brand that tests the most creatives wins. Period. We have engineered our entire business model around eliminating bottlenecks. No account managers playing telephone. No pointless check-in meetings. Just direct access to elite creators and immediate execution.
+          </p>
+          <p style="color: var(--text-primary); opacity: 0.85; line-height: 1.8;">
+            We work on a subscription or sprint model. You get an entire creative strategy and performance marketing department integrated directly into your Slack channels.
           </p>
         </div>
-        <div class="value-card animate-on-scroll">
-          <div class="value-icon">🎬</div>
-          <h3>Cinema Quality</h3>
-          <p>
-            We don't use simple mobile phones for your primary commercials. We utilize full digital cinema cameras and professional lighting for a premium feel.
-          </p>
-        </div>
-        <div class="value-card animate-on-scroll">
-          <div class="value-icon">📈</div>
-          <h3>ROI Obsessed</h3>
-          <p>
-            We are filmmakers who understand spreadsheets. Every ad frame, visual tag, and script hook is constructed to improve conversion rates and ROAS.
-          </p>
+        <div class="animate-on-scroll" style="background: var(--bg-surface); padding: 48px; border-radius: 24px; border: 1px solid var(--border-light); text-align: center;">
+          <div style="font-size: 5rem; font-weight: 900; color: var(--accent-gold); line-height: 1;">0%</div>
+          <div style="font-size: 1.3rem; font-weight: 700; text-transform: uppercase; color: var(--text-primary); margin-top: 10px; margin-bottom: 40px;">Agency Bloat</div>
+          <div style="font-size: 5rem; font-weight: 900; color: var(--accent-gold); line-height: 1;">100%</div>
+          <div style="font-size: 1.3rem; font-weight: 700; text-transform: uppercase; color: var(--text-primary); margin-top: 10px;">Direct Execution</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROCESS TIMELINE SECTION -->
-  <section class="process-section" id="process" style="background: var(--bg-surface);">
+  <!-- SPRINT TIMELINE -->
+  <section class="process-section" style="padding: 100px 0; background: var(--bg-surface);">
     <div class="container">
-      <div class="section-header animate-on-scroll">
-        <span class="section-label">HOW WE WORK</span>
-        <h2 class="section-title">The Accelerated <em>Workflow</em></h2>
-        <p class="section-desc">Our blueprint for turning campaign concepts into ready-to-test assets in 24 hours.</p>
+      <div style="text-align: center; margin-bottom: 80px;">
+        <span class="section-label">48-HOUR SPRINT PROTOCOL</span>
+        <h2 class="section-heading">How We Execute.</h2>
       </div>
 
-      <div class="process-timeline">
-        <div class="process-step animate-on-scroll">
-          <div class="step-num">1</div>
-          <div class="step-content">
-            <h3>Discovery &amp; Strategy Hook</h3>
-            <p>We analyze your target market, competitor bottlenecks, and draft high-converting scripts based on psychological hooks.</p>
-          </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px;">
+        <!-- Step 1 -->
+        <div class="advantage-card animate-on-scroll">
+          <div style="font-size: 3rem; font-weight: 900; color: var(--accent-gold); margin-bottom: 20px;">T-Minus 0</div>
+          <h3>The Briefing</h3>
+          <p style="color: var(--text-secondary); line-height: 1.6; margin-top: 10px;">
+            We receive your objective via our dedicated Slack channel or Notion portal. Within 2 hours, a strategy framework is approved. No formal meetings required.
+          </p>
         </div>
-        <div class="process-step animate-on-scroll">
-          <div class="step-num">2</div>
-          <div class="step-content">
-            <h3>Morning Production Shoot</h3>
-            <p>Our in-house crew shoots using our premium cinema gear. No third-party freelancers. Total creative command.</p>
-          </div>
+        <!-- Step 2 -->
+        <div class="advantage-card animate-on-scroll">
+          <div style="font-size: 3rem; font-weight: 900; color: var(--accent-gold); margin-bottom: 20px;">Hour 24</div>
+          <h3>Marketing</h3>
+          <p style="color: var(--text-secondary); line-height: 1.6; margin-top: 10px;">
+            Cameras are rolling. Whether it's our in-house cyclorama studio or on location, our crew executes the shot list with ruthless efficiency, uploading proxies in real-time.
+          </p>
         </div>
-        <div class="process-step animate-on-scroll">
-          <div class="step-num">3</div>
-          <div class="step-content">
-            <h3>Afternoon Edit &amp; Delivery</h3>
-            <p>Our edit suite handles color-grading, custom sound-design overlays, caption generation, and delivers final social variants by 4:00 PM.</p>
-          </div>
-        </div>
-        <div class="process-step animate-on-scroll">
-          <div class="step-num">4</div>
-          <div class="step-content">
-            <h3>Media Testing &amp; Scaling</h3>
-            <p>We deploy, test ad variants, monitor metrics, and rapidly iterate on hook styles to scale winning ads.</p>
-          </div>
+        <!-- Step 3 -->
+        <div class="advantage-card animate-on-scroll">
+          <div style="font-size: 3rem; font-weight: 900; color: var(--accent-gold); margin-bottom: 20px;">Hour 48</div>
+          <h3>Delivery &amp; Launch</h3>
+          <p style="color: var(--text-secondary); line-height: 1.6; margin-top: 10px;">
+            Color-graded, sound-mixed, and formatted assets hit your inbox. Variations are automatically loaded into your ad accounts for immediate A/B testing.
+          </p>
         </div>
       </div>
     </div>
   </section>
-
   <!-- CTA CONVERSION SECTION -->
   <section class="final-cta">
     <div class="cta-bg-orb"></div>
     <div class="container final-cta-content animate-on-scroll">
-      <p class="section-label">Ready to Align?</p>
-      <h2 class="cta-headline">Let's Team Up and Win.</h2>
+      <p class="section-label">Want Similar Results?</p>
+      <h2 class="cta-headline">Let's Design Your Breakthrough.</h2>
       <p class="cta-description">
-        Schedule your free brand consultation call. No commitment required.
+        Schedule a consultation with our campaign builders to construct a custom marketing timeline.
       </p>
-      <button class="btn-cta-large" id="cta-book-btn">Schedule Strategy Session</button>
+      <button class="btn-cta-large" id="cta-book-btn">Book Your Strategy Call</button>
     </div>
   </section>
 
@@ -208,15 +212,15 @@
         <div class="footer-grid">
           <div class="footer-column footer-brand">
             <a href="index.html" class="logo"><span class="logo-accent">Jay</span>Ads</a>
-            <p class="footer-about">Chennai's premium in-house production and digital growth team.</p>
+            <p class="footer-about">Chennai's premium in-house marketing and digital growth team.</p>
           </div>
           <div class="footer-column">
             <h4 class="footer-heading">Explore</h4>
             <div class="footer-links">
               <a href="index.html">Home</a>
               <a href="services.html">Services</a>
-              <a href="work.html">Our Work</a>
-              <a href="contact.html">Contact</a>
+              <a href="about.html">About</a>
+              <a href="work.html">Work</a>
             </div>
           </div>
           <div class="footer-column">
@@ -253,7 +257,7 @@
         <p class="modal-subtitle">We'll respond within 2 hours.</p>
       </div>
       <div class="modal-success" id="modal-success" style="display:none;">
-        <div class="success-icon">✓</div>
+        <div class="success-icon"></div>
         <h3>You're Booked In!</h3>
         <button class="btn-primary" onclick="closeModal();">Close</button>
       </div>
@@ -263,9 +267,9 @@
         <div class="form-group">
           <select id="booking-service" class="form-select" required>
             <option value="" disabled selected>Select Goal</option>
-            <option value="ad-films">🎬 Ad Films &amp; Video Production</option>
-            <option value="social-commerce">⚡ Social Commerce Ads</option>
-            <option value="branding">🏆 Brand Strategy</option>
+            <option value="paid-ads"> Paid Ads &amp; Performance Marketing</option>
+            <option value="social-commerce"> Social Commerce Ads</option>
+            <option value="branding"> Brand Strategy</option>
             <option value="organic-growth">✦ Web Design &amp; SEO</option>
           </select>
         </div>
@@ -279,11 +283,11 @@
     window.addEventListener('load', () => {
       const preloader = document.getElementById('preloader');
       setTimeout(() => {
+        document.body.classList.add('loaded');
         preloader.classList.add('fade-out');
         setTimeout(() => preloader.style.display = 'none', 600);
       }, 600);
     });
-
 
     window.addEventListener('scroll', () => {
       const scrollProgress = document.getElementById('scroll-progress');
@@ -306,7 +310,7 @@
     }
     function closeModal() { modalOverlay.classList.remove('active'); }
 
-    document.querySelectorAll('.mini-book-btn, #nav-book-btn, #cta-book-btn, #footer-cta-btn').forEach(btn => {
+    document.querySelectorAll('.mini-book-btn, #nav-book-btn, #cta-book-btn, #footer-cta-btn, .hero-book-btn').forEach(btn => {
       btn.addEventListener('click', openModal);
     });
     document.getElementById('modal-close').addEventListener('click', closeModal);
@@ -324,21 +328,6 @@
       hamburger.classList.toggle('active');
       mobileNav.classList.toggle('active');
     });
-
-    // Draw timeline process animation
-    const processTimeline = document.querySelector('.process-timeline');
-    if (processTimeline) {
-      window.addEventListener('scroll', () => {
-        const timelineRect = processTimeline.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        let percent = 0;
-        if (timelineRect.top < windowHeight) {
-          const distanceScrolled = windowHeight - timelineRect.top;
-          percent = Math.min(100, Math.max(0, (distanceScrolled / (timelineRect.height + windowHeight * 0.2)) * 100));
-        }
-        processTimeline.style.setProperty('--timeline-progress', `${percent}%`);
-      });
-    }
 
     // Animate on scroll observer
     const scrollObserver = new IntersectionObserver((entries) => {

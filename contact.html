@@ -4,87 +4,335 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us | JayAds</title>
+  <meta name="description" content="JayAds is Chennai's premium digital marketing agency. Performance ads, social commerce, brand strategy &amp; web growth." />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="section-pearl">
-  
-  <header class="site-header" id="site-header" style="background: rgba(235, 221, 197, 0.9);">
+<body class="services-page">
+  <!-- Noise Overlay & Preloader -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo"><span class="logo-accent">Jay</span>Ads</div>
+      <div class="preloader-bar"><div class="preloader-fill"></div></div>
+      <p class="preloader-text">Loading Capabilities…</p>
+    </div>
+  </div>
+  <div class="scroll-progress" id="scroll-progress"></div>  <header class="site-header" id="site-header">
     <div class="header-inner">
-      <a href="index.html" class="logo" style="color: var(--bg-primary);">Jay<span class="logo-accent">Ads</span></a>
-      <nav class="desktop-nav">
-        <ul class="nav-links">
-          <li><a href="index.html" style="color: var(--bg-primary);">Home</a></li>
-          <li><a href="services.html" style="color: var(--bg-primary);">Services</a></li>
-          <li><a href="work.html" style="color: var(--bg-primary);">Work</a></li>
-          <li><a href="about.html" style="color: var(--bg-primary);">About</a></li>
-        </ul>
+      <a href="index.html" class="logo" aria-label="JayAds Home">
+        <span class="logo-accent">Jay</span>Ads
+      </a>
+
+      <nav class="nav-links" id="nav-links" role="navigation" aria-label="Main Navigation">
+        <a href="index.html" class="nav-home-link" data-section="home">Home</a>
+        <div class="nav-item-dropdown">
+          <a href="services.html" class="dropdown-trigger" data-section="services">Services <svg class="chevron-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px; vertical-align:middle; margin-bottom:3px; opacity:0.8;"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+          <div class="mega-dropdown">
+            <div class="mega-dropdown-inner">
+              <div class="mega-col-links">
+                <span class="mega-title">Growth & Marketing</span>
+                <a href="services.html#digital-marketing" class="mega-link-item">
+                  <div class="mega-link-icon" style="width:24px;height:24px;display:flex;align-items:center;justify-content:center;color:var(--accent-gold);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                  </div>
+                  <div>
+                    <span class="mega-link-title">Digital Marketing Strategy</span>
+                    <span class="mega-link-desc">Data-driven growth plans</span>
+                  </div>
+                </a>
+                <a href="services.html#seo" class="mega-link-item">
+                  <div class="mega-link-icon" style="width:24px;height:24px;display:flex;align-items:center;justify-content:center;color:var(--accent-gold);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  </div>
+                  <div>
+                    <span class="mega-link-title">Organic Growth (SEO)</span>
+                    <span class="mega-link-desc">Long-term search visibility</span>
+                  </div>
+                </a>
+                <a href="services.html#paid-ads" class="mega-link-item">
+                  <div class="mega-link-icon" style="width:24px;height:24px;display:flex;align-items:center;justify-content:center;color:var(--accent-gold);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  </div>
+                  <div>
+                    <span class="mega-link-title">Paid Advertising</span>
+                    <span class="mega-link-desc">Google Ads &amp; Meta Campaigns</span>
+                  </div>
+                </a>
+              </div>
+              <div class="mega-col-links">
+                <span class="mega-title">Design & Consulting</span>
+                <a href="services.html#web-design" class="mega-link-item">
+                  <div class="mega-link-icon" style="width:24px;height:24px;display:flex;align-items:center;justify-content:center;color:var(--accent-gold);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                  </div>
+                  <div>
+                    <span class="mega-link-title">Website Design</span>
+                    <span class="mega-link-desc">High-converting online presence</span>
+                  </div>
+                </a>
+                <a href="services.html#branding" class="mega-link-item">
+                  <div class="mega-link-icon" style="width:24px;height:24px;display:flex;align-items:center;justify-content:center;color:var(--accent-gold);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  </div>
+                  <div>
+                    <span class="mega-link-title">Brand Identity</span>
+                    <span class="mega-link-desc">Positioning and visual assets</span>
+                  </div>
+                </a>
+                <a href="services.html#consulting" class="mega-link-item">
+                  <div class="mega-link-icon" style="width:24px;height:24px;display:flex;align-items:center;justify-content:center;color:var(--accent-gold);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  </div>
+                  <div>
+                    <span class="mega-link-title">Marketing Consulting</span>
+                    <span class="mega-link-desc">Expert strategy and advisory</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="work.html"  data-section="portfolio">Work</a>
+        <a href="about.html"  data-section="process">About</a>
       </nav>
-      <div class="header-actions">
-        <button class="btn-pill btn-pill-primary hero-book-btn">Book Call</button>
-      </div>
+
+      <button class="nav-cta desktop-only" id="nav-book-btn" aria-label="Book a Call">Book a Call</button>
+
+      <button class="hamburger" id="hamburger" aria-label="Open Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="index.html" >Home</a>
+      <a href="services.html" >Services</a>
+      <a href="work.html" >Work</a>
+      <a href="about.html" >About</a>
+      <button class="nav-cta mobile-book-btn" id="mobile-book-btn">Book a Call</button>
     </div>
   </header>
-
-  <section class="section-pearl" style="padding-top: 180px; padding-bottom: 80px;">
-    <div class="container" style="display:flex; gap: 80px; align-items: flex-start;">
+  <!-- HERO SECTION -->
+  <section class="contact-hero" style="padding-top: 180px; padding-bottom: 80px; background: var(--bg-primary);">
+    <div class="container" style="display:flex; gap: 80px; align-items: flex-start; flex-wrap: wrap;">
       
-      <div style="flex: 1;">
-        <h1 class="superside-hero-heading" style="font-size: clamp(3rem, 6vw, 5rem); margin-bottom: 24px;">Let's Talk<br>Growth.</h1>
-        <p style="font-size: 1.25rem; color: var(--bg-primary); opacity: 0.8; margin-bottom: 40px; max-width: 500px;">
-          Whether you need a massive cinematic ad campaign or a complete digital overhaul, our team in Chennai is ready to deploy.
+      <div style="flex: 1; min-width: 300px;">
+        <span class="section-label">GET IN TOUCH</span>
+        <h1 class="hero-headline" style="font-size: clamp(3rem, 6vw, 4.5rem); margin-bottom: 24px;">Let's Talk<br />Growth.</h1>
+        <p style="font-size: 1.25rem; color: var(--text-primary); opacity: 0.85; margin-bottom: 40px; max-width: 500px; line-height: 1.6;">
+          Whether you need a massive performance ad campaign, a full digital rebrand, or an SEO overhaul, our team in Chennai is ready to deploy.
         </p>
         
-        <div class="bento-item" style="background: var(--bg-primary); color: var(--text-primary); padding: 32px;">
-          <h3 style="font-size: 1.5rem; margin-bottom: 16px;">Headquarters</h3>
-          <p style="font-size: 1.1rem; opacity: 0.8; margin-bottom: 8px;">Anna Nagar, Chennai</p>
-          <p style="font-size: 1.1rem; opacity: 0.8; margin-bottom: 24px;">Tamil Nadu, India</p>
-          
-          <h3 style="font-size: 1.5rem; margin-bottom: 16px;">Direct Lines</h3>
-          <p style="font-size: 1.1rem; margin-bottom: 8px;">📞 +91 98765 43210</p>
-          <p style="font-size: 1.1rem;">✉️ jayanth@jayads.com</p>
+        <div class="advantage-card" style="background: var(--bg-surface); color: var(--text-primary); padding: 32px; border: 1px solid var(--border-light);">
+          <h3 style="font-size: 1.4rem; margin-bottom: 16px; color: var(--accent-gold);">Headquarters</h3>
+          <p style="font-size: 1.05rem; opacity: 0.85; margin-bottom: 8px; font-style: normal; line-height: 1.6;">
+            Door No. 7, 40/1, 6th St,<br />
+            Kumaran Nagar, A Block,<br />
+            Anna Nagar East,<br />
+            Chennai – 600102, Tamil Nadu, India.
+          </p>
+          <div style="height: 1px; background: var(--border-light); margin: 24px 0;"></div>
+          <h3 style="font-size: 1.4rem; margin-bottom: 16px; color: var(--accent-gold);">Direct Lines</h3>
+          <p style="font-size: 1.05rem; margin-bottom: 8px;"> +91 98765 43210</p>
+          <p style="font-size: 1.05rem;"> hello@jayads.in</p>
         </div>
       </div>
       
-      <div style="flex: 1; background: var(--bg-surface); padding: 56px; border-radius: 32px; border: 2px solid var(--border-light); color: var(--text-primary);">
-        <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 32px;">Send an Inquiry</h2>
-        <form id="contact-form" style="display:flex; flex-direction:column; gap: 24px;">
+      <div style="flex: 1; min-width: 300px; background: var(--bg-surface); padding: 48px; border-radius: 24px; border: 1px solid var(--border-light); color: var(--text-primary);">
+        <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 32px; color: var(--text-primary);">Send an Inquiry</h2>
+        <form id="direct-contact-form" style="display:flex; flex-direction:column; gap: 20px;">
           <div>
-            <label style="font-size: 0.9rem; font-weight:600; margin-bottom:8px; display:block;">Full Name</label>
-            <input type="text" placeholder="Jayanth S." style="width:100%; padding: 16px; border-radius: 12px; border: 1px solid var(--border-subtle); background: var(--bg-primary); color: var(--text-primary);" required>
+            <label style="font-size: 0.85rem; font-weight:600; margin-bottom:8px; display:block; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary);">Full Name *</label>
+            <input type="text" placeholder="Jayanth S." style="width:100%; padding: 14px 16px; border-radius: 8px; border: 1px solid var(--border-subtle); background: var(--bg-primary); color: var(--text-primary);" required />
           </div>
           <div>
-            <label style="font-size: 0.9rem; font-weight:600; margin-bottom:8px; display:block;">Company Email</label>
-            <input type="email" placeholder="name@brand.com" style="width:100%; padding: 16px; border-radius: 12px; border: 1px solid var(--border-subtle); background: var(--bg-primary); color: var(--text-primary);" required>
+            <label style="font-size: 0.85rem; font-weight:600; margin-bottom:8px; display:block; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary);">Work Email *</label>
+            <input type="email" placeholder="name@brand.com" style="width:100%; padding: 14px 16px; border-radius: 8px; border: 1px solid var(--border-subtle); background: var(--bg-primary); color: var(--text-primary);" required />
           </div>
           <div>
-            <label style="font-size: 0.9rem; font-weight:600; margin-bottom:8px; display:block;">Message</label>
-            <textarea rows="4" placeholder="Tell us about your campaign goals..." style="width:100%; padding: 16px; border-radius: 12px; border: 1px solid var(--border-subtle); background: var(--bg-primary); color: var(--text-primary);" required></textarea>
+            <label style="font-size: 0.85rem; font-weight:600; margin-bottom:8px; display:block; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary);">Company / Brand Name</label>
+            <input type="text" placeholder="JayAds Ltd." style="width:100%; padding: 14px 16px; border-radius: 8px; border: 1px solid var(--border-subtle); background: var(--bg-primary); color: var(--text-primary);" />
           </div>
-          <button type="submit" class="btn-pill btn-pill-primary" style="width:100%; justify-content:center;">Send Message</button>
+          <div>
+            <label style="font-size: 0.85rem; font-weight:600; margin-bottom:8px; display:block; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary);">Message *</label>
+            <textarea rows="4" placeholder="Tell us about your project timeline and goals..." style="width:100%; padding: 14px 16px; border-radius: 8px; border: 1px solid var(--border-subtle); background: var(--bg-primary); color: var(--text-primary);" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary form-submit-btn" style="width:100%; justify-content:center; padding: 16px; font-weight: bold;">Send Message →</button>
         </form>
+        <div id="contact-success-state" style="display:none; text-align:center; padding: 20px 0;">
+          <div style="font-size: 3rem; color: var(--accent-gold); margin-bottom: 16px;"></div>
+          <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 8px;">Inquiry Sent Successfully!</h3>
+          <p style="font-size: 0.95rem; opacity: 0.8;">Our campaign directors will review your details and respond within 2 hours.</p>
+        </div>
       </div>
 
     </div>
   </section>
-  
-  <div id="modal-overlay" class="modal-overlay">
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const contactForm = document.getElementById('direct-contact-form');
+      const successState = document.getElementById('contact-success-state');
+      if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          contactForm.style.display = 'none';
+          if (successState) successState.style.display = 'block';
+        });
+      }
+    });
+  </script>
+  <!-- CTA CONVERSION SECTION -->
+  <section class="final-cta">
+    <div class="cta-bg-orb"></div>
+    <div class="container final-cta-content animate-on-scroll">
+      <p class="section-label">Want Similar Results?</p>
+      <h2 class="cta-headline">Let's Design Your Breakthrough.</h2>
+      <p class="cta-description">
+        Schedule a consultation with our campaign builders to construct a custom marketing timeline.
+      </p>
+      <button class="btn-cta-large" id="cta-book-btn">Book Your Strategy Call</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-column footer-brand">
+            <a href="index.html" class="logo"><span class="logo-accent">Jay</span>Ads</a>
+            <p class="footer-about">Chennai's premium in-house marketing and digital growth team.</p>
+          </div>
+          <div class="footer-column">
+            <h4 class="footer-heading">Explore</h4>
+            <div class="footer-links">
+              <a href="index.html">Home</a>
+              <a href="services.html">Services</a>
+              <a href="about.html">About</a>
+              <a href="work.html">Work</a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h4 class="footer-heading">Headquarters</h4>
+            <address style="font-style:normal; font-size:0.875rem; color:var(--text-secondary); line-height:1.7;">
+              Door No. 7, 40/1, 6th St, Kumaran Nagar, Anna Nagar East, Chennai – 600102.
+            </address>
+          </div>
+          <div class="footer-column">
+            <h4 class="footer-heading">Operational Hours</h4>
+            <div class="footer-hours">
+              <div class="hours-row"><span class="day">Mon — Fri</span><span class="time">9:30 AM – 6:00 PM</span></div>
+              <div class="hours-row"><span class="day">Sat</span><span class="time">10:00 AM – 6:00 PM</span></div>
+            </div>
+            <button class="footer-cta-btn" id="footer-cta-btn">Book a Free Call →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <p class="footer-copyright">&copy; 2026 JayAds. All rights reserved. Built by Jayanth S.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOOK A CALL MODAL -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="modal-card">
-      <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+      <button class="modal-close" id="modal-close" aria-label="Close modal">×</button>
       <div class="modal-header">
-        <h3 style="font-size: 2.5rem; font-weight:800; color:var(--text-primary);">Book Your Growth Session</h3>
+        <div class="modal-logo"><span class="logo-accent">Jay</span>Ads</div>
+        <h2 class="modal-title" id="modal-title">Book Your Free Strategy Call</h2>
+        <p class="modal-subtitle">We'll respond within 2 hours.</p>
+      </div>
+      <div class="modal-success" id="modal-success" style="display:none;">
+        <div class="success-icon"></div>
+        <h3>You're Booked In!</h3>
+        <button class="btn-primary" onclick="closeModal();">Close</button>
       </div>
       <form class="modal-form" id="booking-form">
-        <button type="submit" class="btn-pill btn-pill-primary">Confirm Strategy Session →</button>
+        <div class="form-group"><input type="text" id="booking-name" class="form-input" placeholder="Name" required /></div>
+        <div class="form-group"><input type="email" id="booking-email" class="form-input" placeholder="Work Email" required /></div>
+        <div class="form-group">
+          <select id="booking-service" class="form-select" required>
+            <option value="" disabled selected>Select Goal</option>
+            <option value="paid-ads"> Paid Ads &amp; Performance Marketing</option>
+            <option value="social-commerce"> Social Commerce Ads</option>
+            <option value="branding"> Brand Strategy</option>
+            <option value="organic-growth">✦ Web Design &amp; SEO</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-primary form-submit-btn">Confirm Strategy Session →</button>
       </form>
     </div>
   </div>
-  
+
   <script>
-    const bookButtons = document.querySelectorAll('.hero-book-btn');
+    // Preloader fade-out
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('preloader');
+      setTimeout(() => {
+        document.body.classList.add('loaded');
+        preloader.classList.add('fade-out');
+        setTimeout(() => preloader.style.display = 'none', 600);
+      }, 600);
+    });
+
+    window.addEventListener('scroll', () => {
+      const scrollProgress = document.getElementById('scroll-progress');
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (scrollProgress && docHeight > 0) {
+        scrollProgress.style.width = (scrollTop / docHeight) * 100 + '%';
+      }
+    });
+
+    // Modal
     const modalOverlay = document.getElementById('modal-overlay');
-    const modalClose = document.getElementById('modal-close');
-    bookButtons.forEach(btn => btn.addEventListener('click', () => modalOverlay.classList.add('active')));
-    modalClose.addEventListener('click', () => modalOverlay.classList.remove('active'));
+    const bookingForm = document.getElementById('booking-form');
+    const modalSuccess = document.getElementById('modal-success');
+    
+    function openModal() {
+      modalOverlay.classList.add('active');
+      bookingForm.style.display = 'flex';
+      modalSuccess.style.display = 'none';
+    }
+    function closeModal() { modalOverlay.classList.remove('active'); }
+
+    document.querySelectorAll('.mini-book-btn, #nav-book-btn, #cta-book-btn, #footer-cta-btn, .hero-book-btn').forEach(btn => {
+      btn.addEventListener('click', openModal);
+    });
+    document.getElementById('modal-close').addEventListener('click', closeModal);
+
+    bookingForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      bookingForm.style.display = 'none';
+      modalSuccess.style.display = 'flex';
+    });
+
+    // Mobile Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileNav.classList.toggle('active');
+    });
+
+    // Animate on scroll observer
+    const scrollObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.animate-on-scroll').forEach(el => scrollObserver.observe(el));
   </script>
 </body>
 </html>
