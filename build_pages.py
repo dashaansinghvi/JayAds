@@ -7,7 +7,7 @@ def build_head(title):
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
-  <meta name="description" content="JayAds is Chennai's premium digital marketing agency. Performance ads, social commerce, brand strategy &amp; web growth." />
+  <meta name="description" content="JayAds is Chennai's premium digital marketing agency. Performance ads, social commerce, brand strategy &amp; web marketing." />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -45,14 +45,14 @@ def build_header(active_page):
           <div class="mega-dropdown">
             <div class="mega-dropdown-inner">
               <div class="mega-col-links">
-                <span class="mega-title">Growth & Marketing</span>
+                <span class="mega-title">Digital Marketing</span>
                 <a href="services.html#digital-marketing" class="mega-link-item">
                   <div class="mega-link-icon" style="width:24px;height:24px;display:flex;align-items:center;justify-content:center;color:var(--accent-gold);">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
                   </div>
                   <div>
                     <span class="mega-link-title">Digital Marketing Strategy</span>
-                    <span class="mega-link-desc">Data-driven growth plans</span>
+                    <span class="mega-link-desc">Data-driven marketing strategies</span>
                   </div>
                 </a>
                 <a href="services.html#seo" class="mega-link-item">
@@ -60,7 +60,7 @@ def build_header(active_page):
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
                   </div>
                   <div>
-                    <span class="mega-link-title">Organic Growth (SEO)</span>
+                    <span class="mega-link-title">Search Engine Optimization (SEO)</span>
                     <span class="mega-link-desc">Long-term search visibility</span>
                   </div>
                 </a>
@@ -151,7 +151,7 @@ def build_footer_block():
         <div class="footer-grid">
           <div class="footer-column footer-brand">
             <a href="index.html" class="logo"><span class="logo-accent">Jay</span>Ads</a>
-            <p class="footer-about">Chennai's premium in-house marketing and digital growth team.</p>
+            <p class="footer-about">Chennai's premium in-house digital marketing team.</p>
           </div>
           <div class="footer-column">
             <h4 class="footer-heading">Explore</h4>
@@ -278,6 +278,12 @@ def build_footer_block():
     }, { threshold: 0.1 });
     document.querySelectorAll('.animate-on-scroll').forEach(el => scrollObserver.observe(el));
   </script>
+
+  <!-- UI Interactions DOM -->
+  <div class="custom-cursor-dot" id="cursor-dot"></div>
+  <div class="custom-cursor-halo" id="cursor-halo"></div>
+  <div class="page-transition-overlay" id="page-transition"></div>
+  <script src="ui_interactions.js"></script>
 </body>
 </html>"""
 
@@ -290,7 +296,7 @@ def generate_services():
       <span class="section-label">OUR CAPABILITIES</span>
       <h1 class="hero-headline">
         Full-Stack Marketing<br />
-        &amp; <em>Growth</em> Services.
+        &amp; <em>Marketing</em> Services.
       </h1>
       <p class="hero-sub">
         No hand-offs. No slow agency bloat. Just elite creative work engineered directly to boost conversion rates and drive revenue.
@@ -309,7 +315,7 @@ def generate_services():
           <span class="service-num">01</span>
           <h2 class="service-detail-title">Paid Ads &amp; Performance Marketing</h2>
           <p class="service-detail-desc">
-            We produce highly targeted performance marketing campaigns, optimized Google Ads, and data-driven Meta ads that demand attention. Utilizing deep analytics and continuous A/B testing, we bring scalable growth to your brand.
+            We produce highly targeted performance marketing campaigns, optimized Google Ads, and data-driven Meta ads that demand attention. Utilizing deep analytics and continuous A/B testing, we bring scalable results to your brand.
           </p>
           <ul class="service-features-list">
             <li> Full Campaign Strategy &amp; Setup</li>
@@ -382,7 +388,7 @@ def generate_services():
       <div class="service-detail-block alt animate-on-scroll" id="web">
         <div class="service-detail-info">
           <span class="service-num">04</span>
-          <h2 class="service-detail-title">Web &amp; Organic Growth (SEO)</h2>
+          <h2 class="service-detail-title">Web &amp; Search Engine Optimization (SEO)</h2>
           <p class="service-detail-desc">
             We build and optimize your web presence to capture search traffic and turn it into passive, compounding lead flow. We develop responsive sites built on next-gen frameworks.
           </p>
@@ -392,11 +398,11 @@ def generate_services():
             <li> E-commerce CRO (Conversion Rate Optimization) setups</li>
             <li> Ongoing link building campaigns and digital PR</li>
           </ul>
-          <button class="btn-primary mini-book-btn">Book SEO Growth Audit</button>
+          <button class="btn-primary mini-book-btn">Book SEO Services Audit</button>
         </div>
         <div class="service-detail-visual">
           <div class="visual-card">
-            <span class="badge-tag">GROWTH</span>
+            <span class="badge-tag">MARKETING</span>
             <h3>Compounding Traffic.</h3>
             <p>While ads stop running when budgets dry up, organic SEO traffic builds over years.</p>
           </div>
@@ -420,7 +426,7 @@ def generate_work():
         Optimized for <em>Scale</em>.
       </h1>
       <p class="hero-sub">
-        Explore our recent campaigns across paid media, brand strategy, and growth marketing.
+        Explore our recent campaigns across paid media, brand strategy, and digital marketing.
       </p>
     </div>
   </section>
@@ -502,7 +508,7 @@ def generate_work():
         <!-- Project 6 -->
         <div class="portfolio-card social animate-on-scroll" data-category="social">
           <div class="portfolio-thumb" style="background: linear-gradient(135deg, #220901 0%, #621708 100%);">
-            <span class="portfolio-tag">SEO Growth</span>
+            <span class="portfolio-tag">SEO Services</span>
           </div>
           <div class="portfolio-info">
             <h3 class="portfolio-title">Local Service Provider</h3>
@@ -634,9 +640,9 @@ def generate_contact():
       
       <div style="flex: 1; min-width: 300px;">
         <span class="section-label">GET IN TOUCH</span>
-        <h1 class="hero-headline" style="font-size: clamp(3rem, 6vw, 4.5rem); margin-bottom: 24px;">Let's Talk<br />Growth.</h1>
+        <h1 class="hero-headline" style="font-size: clamp(3rem, 6vw, 4.5rem); margin-bottom: 24px;">Let's Talk<br />Marketing.</h1>
         <p style="font-size: 1.25rem; color: var(--text-primary); opacity: 0.85; margin-bottom: 40px; max-width: 500px; line-height: 1.6;">
-          Whether you need a massive performance ad campaign, a full digital rebrand, or an SEO overhaul, our team in Chennai is ready to deploy.
+          Whether you need a massive performance ad campaign, a full digital rebrand, or an SEO campaign, our team in Chennai is ready to deploy.
         </p>
         
         <div class="advantage-card" style="background: var(--bg-surface); color: var(--text-primary); padding: 32px; border: 1px solid var(--border-light);">
